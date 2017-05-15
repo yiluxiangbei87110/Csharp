@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cssDEmo</title>
+	<style type="text/css">
+	/*+相邻选择器  ~通用兄弟选择器(E~F 选择e元素后面的选择器)*/
+		section>div+div{
+			background: pink;
+			margin-top: 5px;
+		}
+/*		p:first-child {
+			background: red;
+		}
+		p:nth-of-type(1){
+			background: blue;
+		}
+		p:nth-child(1){
+			background: yellow;
+		}*/
+		p.first+p{
+			background: blue;
+		}
+		p.second~p{
+			background: red;
+			margin-top: 5px;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div>11111111111111111</div>
+		<div>2222222222222</div>
+		<div>1111111444444441111111111</div>
+		<div>44444444444</div>
+		<div>555555555555</div>
+		<div>66666666666</div>
+		<div>77777777777</div>
+	</section>
+	<hr>
+	<div>
+		<p class="first">111111111111</p>
+		<p>111111111111</p>
+		<p>111111111111</p>
+		<p>111111111111</p>
+		<p>111111111111</p>
+	</div>
+	<hr>
+	<div>
+		<p>111111111111</p>
+		<p class="second">111111111111</p>
+		<p>111111111111</p>
+		<p>111111111111</p>
+		<p>111111111111</p>
+	</div>
+
+</body>
+</html>

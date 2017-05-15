@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cssDEmo</title>
+	<style type="text/css">
+		div.title{
+			background: pink;
+			margin-top: 5px;
+			cursor: pointer;
+		}
+		div.title+div.content{
+			display: none;
+		}
+		div.show+div.content{
+			display: block;
+		}
+
+		input[type=checkbox],input[type=radio]{
+			display: none;
+		}
+		input[type=checkbox]:checked+span,input[type=radio]:checked+span{
+			background: pink;
+		}
+		span{
+			cursor: pointer;
+		}
+		input[type=file]{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<hr>可以做折叠面板<hr>
+	<div class="title">title1111111</div>
+	<div class="content">content1111111</div>
+	<div class="title">title222222222</div>
+	<div class="content">content222222</div>
+	<div class="title">title33333333</div>
+	<div class="content">content33333</div>
+	<hr>配合label和:checked可以做单选和多选<hr>
+	<div class="tags">
+		<label>
+			<input type="checkbox" name="123">
+			<span>1111111111111</span>
+		</label>
+		<label>
+			<input type="checkbox" name="123">
+			<span>1111111111111</span>
+		</label>
+		<label>
+			<input type="checkbox" name="123">
+			<span>1111111111111</span>
+		</label>
+		<label>
+			<input type="checkbox" name="123">
+			<span>1111111111111</span>
+		</label>
+	</div>
+
+	<hr>
+	<div class="tags">
+		<label>
+			<input type="radio" name="123">
+			<span>1111111111111</span>
+		</label>
+		<label>
+			<input type="radio" name="123">
+			<span>1111111111111</span>
+		</label>
+		<label>
+			<input type="radio" name="123">
+			<span>1111111111111</span>
+		</label>
+		<label>
+			<input type="radio" name="123">
+			<span>1111111111111</span>
+		</label>
+	</div>
+	<hr>可以解决上传图片难看的field表单<hr>
+	<label>
+		<input type="file">
+		<span>上传图片</span>
+	</label>
+	<script type="text/javascript">
+			document.addEventListener('click',function(){
+				console.log(1111111111);
+			},false);
+			// document.attachEvent('onclick',function(){
+			// 	alert(222222222222);
+			// });
+			// var titles=document.querySelectorAll('.title');
+			// for (var i = 0; i < titles.length; i++) {
+			// 	titles[i].onclick=function(){
+			// 		//!!!!<=Ie9不支持classLIst
+			// 		this.classList.toggle("show");
+			// 	}
+			// }
+	</script>
+</body>
+</html>
