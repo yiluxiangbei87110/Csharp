@@ -4,12 +4,39 @@
 	<meta charset="UTF-8">
 	<title>css练习</title>
 	<style type="text/css">
-		div{
+		.wrap{
+			width: 800px;
+			height: 800px;
+			margin: auto;
 			border: solid red 1px;
+			transform-style:preserve-3d;
+			perspective:400px;
+		}
+		img:nth-child(1){
+			transform:rotate(45deg);
+		}
+		img:nth-child(2){
+			transform:rotateX(80deg);
+		}
+		img:nth-child(3){
+/*			transform:rotateX();*/
+			animation:spin 1s 1s infinite ease-in;
+		}
+		@keyframes spin{
+			0%{
+				transform:rotateX(12deg);
+			}
+			100%{
+				transform:rotateX(120deg);
+			}
 		}
 	</style>
 </head>
 <body>
-	<div><img src="../img/king.png"></div>
+	<div class="wrap">
+		<img src="../img/king.png">
+		<img src="../img/king.png">
+		<img src="../img/king.png">
+	</div>
 </body>
 </html>
