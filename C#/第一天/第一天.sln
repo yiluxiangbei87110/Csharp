@@ -13,6 +13,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo4占位符及用户输�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo4类型转换", "Demo4类型转换\Demo4类型转换.csproj", "{D18C98FA-4180-4363-A0F1-C3A1467846BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo5ConvertTOAndException", "Demo5ConvertTO\Demo5ConvertTOAndException.csproj", "{4CF61813-7D23-4090-9128-8638D15ADB28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo6枚举", "Demo6枚举\Demo6枚举.csproj", "{50EE1AD1-E4AF-48A0-B18D-52AC17814206}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo7结构struct", "Demo结构struct\Demo7结构struct.csproj", "{EF34987F-88A0-4686-8B4A-EFA468173E81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo8数组", "Demo8数组\Demo8数组.csproj", "{40E421A2-C92D-4986-840E-7E1D3F403F7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9方法", "Demo9方法\Demo9方法.csproj", "{4D1BFA41-1D14-4DC8-BB4A-6CD1DCC2512B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo10方法", "Demo10方法\Demo10方法.csproj", "{2DC2BA09-CBCF-4524-89C9-90F58666B1A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9方法中的out参数", "Demo9方法中的out参数\Demo9方法中的out参数.csproj", "{8995BC9A-89D7-463C-9518-DB921E0E30CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +53,34 @@ Global
 		{D18C98FA-4180-4363-A0F1-C3A1467846BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D18C98FA-4180-4363-A0F1-C3A1467846BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D18C98FA-4180-4363-A0F1-C3A1467846BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CF61813-7D23-4090-9128-8638D15ADB28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CF61813-7D23-4090-9128-8638D15ADB28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CF61813-7D23-4090-9128-8638D15ADB28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CF61813-7D23-4090-9128-8638D15ADB28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50EE1AD1-E4AF-48A0-B18D-52AC17814206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50EE1AD1-E4AF-48A0-B18D-52AC17814206}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50EE1AD1-E4AF-48A0-B18D-52AC17814206}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50EE1AD1-E4AF-48A0-B18D-52AC17814206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF34987F-88A0-4686-8B4A-EFA468173E81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF34987F-88A0-4686-8B4A-EFA468173E81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF34987F-88A0-4686-8B4A-EFA468173E81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF34987F-88A0-4686-8B4A-EFA468173E81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40E421A2-C92D-4986-840E-7E1D3F403F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40E421A2-C92D-4986-840E-7E1D3F403F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40E421A2-C92D-4986-840E-7E1D3F403F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40E421A2-C92D-4986-840E-7E1D3F403F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D1BFA41-1D14-4DC8-BB4A-6CD1DCC2512B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1BFA41-1D14-4DC8-BB4A-6CD1DCC2512B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1BFA41-1D14-4DC8-BB4A-6CD1DCC2512B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1BFA41-1D14-4DC8-BB4A-6CD1DCC2512B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DC2BA09-CBCF-4524-89C9-90F58666B1A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC2BA09-CBCF-4524-89C9-90F58666B1A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC2BA09-CBCF-4524-89C9-90F58666B1A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC2BA09-CBCF-4524-89C9-90F58666B1A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8995BC9A-89D7-463C-9518-DB921E0E30CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8995BC9A-89D7-463C-9518-DB921E0E30CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8995BC9A-89D7-463C-9518-DB921E0E30CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8995BC9A-89D7-463C-9518-DB921E0E30CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

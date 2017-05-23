@@ -21,6 +21,8 @@ namespace Demo4类型转换
             Console.WriteLine(n5);//3.33333333333333;
             //通过占位符控制小数个数
             Console.WriteLine("{0:0.00}",n5);//3.33
+            Random random = new Random();
+            Console.WriteLine(random.Next(1, 9));
             Console.ReadKey();
         }
     }
