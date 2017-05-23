@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9方法中的ref参数"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9方法params可变参数", "Demo9方法params可变参数\Demo9方法params可变参数.csproj", "{A7F456C9-E429-4827-9253-ACC2A4F4AD13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo10重载", "Demo10重载\Demo10重载.csproj", "{B828A80D-3658-4CB1-A8E5-764EFD229712}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{A7F456C9-E429-4827-9253-ACC2A4F4AD13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7F456C9-E429-4827-9253-ACC2A4F4AD13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7F456C9-E429-4827-9253-ACC2A4F4AD13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B828A80D-3658-4CB1-A8E5-764EFD229712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B828A80D-3658-4CB1-A8E5-764EFD229712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B828A80D-3658-4CB1-A8E5-764EFD229712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B828A80D-3658-4CB1-A8E5-764EFD229712}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
