@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo10方法", "Demo10方�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9方法中的out参数", "Demo9方法中的out参数\Demo9方法中的out参数.csproj", "{8995BC9A-89D7-463C-9518-DB921E0E30CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9方法中的ref参数", "Demo9方法中的ref参数\Demo9方法中的ref参数.csproj", "{0E40DF52-6A5C-4E43-B025-F4ECB597E8EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9方法params可变参数", "Demo9方法params可变参数\Demo9方法params可变参数.csproj", "{A7F456C9-E429-4827-9253-ACC2A4F4AD13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{8995BC9A-89D7-463C-9518-DB921E0E30CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8995BC9A-89D7-463C-9518-DB921E0E30CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8995BC9A-89D7-463C-9518-DB921E0E30CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E40DF52-6A5C-4E43-B025-F4ECB597E8EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E40DF52-6A5C-4E43-B025-F4ECB597E8EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E40DF52-6A5C-4E43-B025-F4ECB597E8EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E40DF52-6A5C-4E43-B025-F4ECB597E8EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7F456C9-E429-4827-9253-ACC2A4F4AD13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F456C9-E429-4827-9253-ACC2A4F4AD13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F456C9-E429-4827-9253-ACC2A4F4AD13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F456C9-E429-4827-9253-ACC2A4F4AD13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
