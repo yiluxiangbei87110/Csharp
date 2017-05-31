@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>extjs练习</title>
+	<link rel="stylesheet" href="classic/theme-neptune/resources/theme-neptune-all.css">
+	<script type="text/javascript" src="ext-all-debug.js"></script>
+	<script type="text/javascript" src="classic/theme-neptune/theme-neptune.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		Ext.onReady(function(){
+			Ext.define('myWin',{
+				extend:'Ext.window.Window',
+				width:200,
+				height:300,
+				title:'创建一个window的对话框',
+				html:'var win=Ext.create----win.show()',
+				say:function(){
+					Ext.Msg.alert("initComponent可以初始化调用方法哦！");
+				},
+				config:{
+					age:25
+				},
+				initComponent:function(){
+					this.say();
+					this.callParent(arguments);
+				}
+			});
+			var win=Ext.create('myWin',{
+				title:'这个是子类的'
+			});
+			win.show();
+		//config在类声明的时候适用，可以自动获取set和get方法。经过测试不止config里面的可以，其余的也可以
+			console.log(win.getAge());//25
+			console.log(win.getTitle());
+			console.log(win.getWidth());
+		});
+		//requires js异步加载
+
+	</script>
+</body>
+</html>

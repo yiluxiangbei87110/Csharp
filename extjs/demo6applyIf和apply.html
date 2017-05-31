@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>apply 和applyIf的区别</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="packages/font-awesome/resources/font-awesome-all.css">
+    <link rel="stylesheet" type="text/css" href="classic/theme-neptune/resources/theme-neptune-all.css">
+    <script type="text/javascript" src="ext-all-debug.js"></script>
+    <script type="text/javascript" src="classic/theme-neptune/theme-neptune.js"></script>
+</head>
+
+<body></body>
+<script type="text/javascript" src="packages/charts/classic/charts.js"></script>
+<script type="text/javascript">
+// apply及applyIf方法都是用于实现把一个对象中的属性应用于另外一个对象中，相当于属性拷贝。
+// 不同的是apply将会覆盖目标对象中的属性，而applyIf只拷贝目标对象中没有而源对象中有的属性。
+
+// apply 方法的签名为“apply( Object obj, Object config, Object defaults ) : Object”，该方法包含三个参数，第一个参数是要拷贝的目标对象，第二个参数是拷贝的源对象，第三个参数是可选的，表示给目标对象提供一个默认值。
+// 可以简单的理解成把第三个参数（如果有的话）及第二个参数中的属性拷贝给第一个参数对象。
+//Ext.apply(b2, b1, { p3: "p3 value" });
+
+var p1 = {
+    name: 'Felix',
+    gender: 'male',
+    sayName: function() {
+        alert(this.name);
+    }
+}
+var p2 = new Object();
+//将后面的属性复制给前面的对象
+p2.name = "Maria";
+Ext.apply(p2, p1);
+p2.sayName(); //Felix(当然如若在apply后面调用还是可以改变的)
+
+// var p1 = {
+//  name: 'Felix',
+//  gender: 'male',
+//  sayName: function() {
+//    console.log(this.name);
+//  }
+// }
+// var p2 = new Object();
+// //将后面的属性复制给前面的对象
+// p2.name = "Maria";
+// Ext.applyIf(p2, p1);
+// p2.sayName();//maria (当然如若在apply后面调用还是可以改变的).
+
+//原生js首先， apply() 方法接收两个参数：一个是在其中运行函数的作用域，另一个是参数数组。其中，第二个参数可以是 Array 的实例，也可以是arguments 对象。
+
+//call 和apply 两个参数，第一个是作用域，第二个是参数对象arguments或者是数组【】，对于call只能是逐一列举出来的参数。
+var arr = [1, 2, 3, 4, 53, 2, -1];
+var bb = Math.max.apply(null, arr);
+console.log(bb);
+
+function add(num1, num2) {
+    return num2 + num1;
+}
+var bb = add.apply(null, [1, 2]);
+console.log(bb);
+</script>
+
+</html>

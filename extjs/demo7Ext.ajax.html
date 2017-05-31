@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>extjs练习</title>
+    <link rel="stylesheet" href="classic/theme-neptune/resources/theme-neptune-all.css">
+    <script type="text/javascript" src="ext-all-debug.js"></script>
+    <script type="text/javascript" src="classic/theme-neptune/theme-neptune.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+    Ext.Ajax.request({
+        url: 'json/users.json',
+        timeout:3000,
+        success: function(response, opts) {
+            console.log(response);
+            var obj = Ext.decode(response.responseText);
+            console.dir(obj);
+        },
+
+        failure: function(response, opts) {
+            console.log('server-side failure with status code ' + response.status);
+        }
+    });
+    </script>
+</body>
+
+</html>

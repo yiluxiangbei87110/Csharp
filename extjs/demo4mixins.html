@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>extjs练习</title>
+    <link rel="stylesheet" href="classic/theme-neptune/resources/theme-neptune-all.css">
+    <script type="text/javascript" src="ext-all-debug.js"></script>
+    <script type="text/javascript" src="classic/theme-neptune/theme-neptune.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // mixins 类似于多继承
+    Ext.onReady(function() {
+        Ext.define('CanSing', {
+            sing: function() {
+                alert("i can sing")
+            }
+        });
+        Ext.define('CanWrite', {
+            write: function() {
+                alert("i can write")
+            }
+        });
+
+        Ext.define('Musician', {
+            mixins: ['CanSing','CanWrite']
+        });
+        var mixinsChild=Ext.create('Musician',{});
+        mixinsChild.write();
+        mixinsChild.sing();
+    });
+    </script>
+</body>
+
+</html>

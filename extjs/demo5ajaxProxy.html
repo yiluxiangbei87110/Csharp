@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>extjs练习</title>
+    <link rel="stylesheet" href="classic/theme-neptune/resources/theme-neptune-all.css">
+    <script type="text/javascript" src="ext-all-debug.js"></script>
+    <script type="text/javascript" src="classic/theme-neptune/theme-neptune.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // 数据代理proxy是进行数据读写的主要途径,通过代理操作数据进行CRUD ---增删改查每一步操作全会得到唯一的Ext.data.Operation实例他包含了所有的请求参数。它使用AJAX请求来从服务器获取数据, 然后通常将它们放入 Store中. 
+
+    //问题 ：以这种形式怎么传参数？？？？？？ 
+    Ext.define('User', {
+        extend: 'Ext.data.Model',
+        fields: ['id', 'name', 'email']
+    });
+
+    //The Store contains the AjaxProxy as an inline configuration
+    var store = Ext.create('Ext.data.Store', {  
+        model: 'User',  
+        proxy: {  
+            type: 'ajax',  
+            url : 'users.json?page=34&limit=35'
+        }  
+    });  
+    store.load();
+    console.log(store.getData());
+
+
+// 上面的代码类似于下面的这些语句，问题：：虽然读了，却不知道怎么读出数据？？
+    // var proxy = new Ext.data.proxy.Ajax({
+    //   url: '/users'
+    // });
+
+    // var operation = proxy.createOperation('read', {
+    //   start : 50,
+    //   limit : 25
+    // });
+
+    // proxy.read(operation); //GET /users?start=50&limit;=25
+
+    //console.log(store.getAt(0));null ？？？？
+
+    // var operation = proxy.createOperation('read', {
+    //     page: 1,
+    //     limit: 23
+    // });
+    // proxy.doRequest(operation,function(res){
+    //     console.log(res);
+    // })
+    // var result = proxy.read(operation);
+
+    // console.log(result.getUrl()); //users.json?_dc=1494404130570
+
+    // console.log(result.getParams()); //Object {page: 1, limit: 23}
+
+    // console.log(result.getCallback()); //function (options, success, response) {
+
+    // console.log(result.getRecords()); //null
+    </script>
+</body>
+
+</html>
