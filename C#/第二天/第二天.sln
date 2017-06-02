@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo6集合", "Demo6集合\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo6Hashtable键值对集合", "Demo6Hashtable键值对集合\Demo6Hashtable键值对集合.csproj", "{7561EFB9-1FBD-4288-8D5C-1B3D36F0A07F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9复制文件", "Demo9复制文件\Demo9复制文件.csproj", "{D29D9D6A-3AD5-42EF-B6DD-544AC3404A4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demo91抽象", "demo91抽象\demo91抽象.csproj", "{9F7757C0-D217-44CB-A0B9-C61B2DF2FEAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{7561EFB9-1FBD-4288-8D5C-1B3D36F0A07F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7561EFB9-1FBD-4288-8D5C-1B3D36F0A07F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7561EFB9-1FBD-4288-8D5C-1B3D36F0A07F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D29D9D6A-3AD5-42EF-B6DD-544AC3404A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29D9D6A-3AD5-42EF-B6DD-544AC3404A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29D9D6A-3AD5-42EF-B6DD-544AC3404A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29D9D6A-3AD5-42EF-B6DD-544AC3404A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F7757C0-D217-44CB-A0B9-C61B2DF2FEAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7757C0-D217-44CB-A0B9-C61B2DF2FEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7757C0-D217-44CB-A0B9-C61B2DF2FEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7757C0-D217-44CB-A0B9-C61B2DF2FEAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
