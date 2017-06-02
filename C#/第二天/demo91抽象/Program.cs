@@ -15,6 +15,7 @@ namespace demo91抽象
             //虽然赋给了父类，但是其子类重写了父类的抽象方法，所以依然是子类的方法
             Animal a = new Dog();
             a.Bark();
+            Console.ReadKey();
         }
     }
     public abstract  class  Animal
@@ -28,6 +29,7 @@ namespace demo91抽象
         public override void Bark()
         {
             Console.WriteLine("狗狗汪汪叫");
+          
         }
     }
 
