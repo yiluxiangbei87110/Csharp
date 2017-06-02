@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>extjsExample</title>
+    <link rel="stylesheet" href="classic/theme-neptune/resources/theme-neptune-all.css">
+    <script type="text/javascript" src="ext-all-debug.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+    Ext.application({
+        name: 'MyApp',
+        launch: function() {
+            var months = Ext.create('Ext.data.Store', {
+                fields: ['abbr', 'name'],
+                data: [{
+                    "abbr": "JAN",
+                    "name": "January"
+                }, {
+                    "abbr": "FEB",
+                    "name": "February"
+                }, {
+                    "abbr": "MAR",
+                    "name": "March"
+                }, {
+                    "abbr": "APR",
+                    "name": "April"
+                }, {
+                    "abbr": "MAY",
+                    "name": "May"
+                }, {
+                    "abbr": "JUN",
+                    "name": "June"
+                }, {
+                    "abbr": "JUL",
+                    "name": "July"
+                }, {
+                    "abbr": "AUG",
+                    "name": "Auguest"
+                }, {
+                    "abbr": "SEP",
+                    "name": "September"
+                }, {
+                    "abbr": "OCT",
+                    "name": "October"
+                }, {
+                    "abbr": "NOV",
+                    "name": "November"
+                }, {
+                    "abbr": "DEC",
+                    "name": "December"
+                }]
+            });
+
+            Ext.create('Ext.form.Panel', {
+                renderTo: Ext.getBody(),
+                flex: 1,
+                title: '顾客回馈单',
+                bodyPadding: 10,
+                buttonAlign: 'left',
+                xtype:"form",
+                id: 'myform',
+                items: [{
+                    xtype: 'fieldcontainer',
+                    layout: 'hbox',
+                    fieldLabel: 'name',
+                    defaultType: 'textfield',
+                    combineErrors: true,
+                    defaults: {
+                        hideLabel: false
+                    },
+                    items: [{
+                        fieldLabel: 'firstname',
+                        name: 'firstname',
+                        allowBlank: false,
+                        emptyText: '请输入姓名',
+                        flex: 3
+                    }, {
+                        fieldLabel: 'secondname',
+                        name: 'secondname',
+                        // id:'secondname',
+                        allowBlank: false,
+                        emptyText: '请输入姓名',
+                        flex: 2,
+                        margin: '0 0 0 5'
+                    }]
+                }, {
+                    fieldLabel: 'date',
+                    xtype: 'datefield',
+                    name: 'data',
+                    maxValue: new Date(),
+                    allowBlank: false,
+                    emptyText: '请选择日期'
+                }, {
+                    fieldLabel: '邮箱',
+                    name: 'email',
+                    xtype: 'textfield',
+                    vtype: 'email'
+                }, {
+                    xtype: 'radiogroup',
+                    fieldLabel: '单选框',
+                    vertical: true,
+                    columns: 1,
+                    items: [{
+                        boxLabel: '1234',
+                        name: 'radio',
+                        inputValue: '1234545'
+                    }, {
+                        boxLabel: '124',
+                        name: 'radio',
+                        inputValue: '123545'
+                    }, {
+                        boxLabel: '123',
+                        name: 'radio',
+                        inputValue: '1'
+                    }]
+                }, {
+                    fieldLabel: '数字哈',
+                    xtype: 'numberfield',
+                    name: 'count',
+                    maxValue: '23'
+                }, {
+                    xtype: 'checkboxgroup',
+                    fieldLabel: '多选框',
+                    columns: 1,
+                    vertical: true,
+                    items: [{
+                        boxLabel: '1123',
+                        name: 'Multip',
+                        inputValue: '192'
+                    }, {
+                        boxLabel: '123',
+                        name: 'Multip',
+                        inputValue: '128'
+                    }, {
+                        boxLabel: '112323',
+                        name: 'Multip',
+                        inputValue: '2'
+                    }]
+                }, {
+                    xtype: 'radiogroup',
+                    fieldLabel: '横着的radion',
+                    vertical: false, //让其横着排列，百分比比较靠谱
+                    items: [{
+                        boxLabel: '1223',
+                        name: '1234',
+                        inputValue: '1234',
+                        width: '30%'
+                    }, {
+                        boxLabel: '124',
+                        name: '1234',
+                        inputValue: '1234',
+                        width: '30%'
+                    }, {
+                        boxLabel: '12t',
+                        name: '1234',
+                        inputValue: '1234',
+                        width: '30%'
+                    }]
+                }, {
+                    xtype: 'textareafield',
+                    name: 'textarea',
+                    id: 'textarea',
+                    fieldLabel: 'wenbenyu',
+                    //flex:1, 为什么flex不好使
+                    width: '100%',
+                    height: 200
+
+                }],
+                buttons: [{
+                    text: 'submit',
+                    handler: function() {
+                        // var values=Ext.getCmp('myform').getValues();//通过id 结果数组
+                        // var values=this.up('form').getValues();//通过组件  结果数据
+                        // Ext.getCmp('secondname').setValue('ahgnansd'); 
+                        // Ext.getCmp('textarea').setValue('1223333333333');
+                        // Ext.getCmp('textarea').setRawValue('333333333333');
+
+                        var form = this.up('form').getForm();
+                        if (form.isValid()) {
+                            Ext.Msg.alert('ok');
+                            form.submit({
+                                success: function() {
+
+                                },
+                                failure: function() {
+
+                                }
+                            });
+                        } else {
+                            Ext.Msg.alert('Error', 'Fix the errors in the form')
+                        }
+                    }
+                }]
+
+            });
+        }
+    });
+    </script>
+</body>
+
+</html>
