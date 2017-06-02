@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>extjsExample</title>
+    <link rel="stylesheet" href="classic/theme-neptune/resources/theme-neptune-all.css">
+    <script type="text/javascript" src="ext-all-debug.js"></script>
+    <script type="text/javascript" src="classic/theme-neptune/theme-neptune.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //---------alert弹框里直接写数字会报错--------------------
+    Ext.onReady(function(){
+	    //Ext.Msg.alert('我是提示框',"保存");
+
+
+	//---------不放在onReady方法里面也会报错-------------------------
+	    // Ext.Msg.confirm("温馨提示","你确定要关闭窗口吗",function(b){
+		   // 			if(b=="yes"){
+		   // 				alert("您点击了YES");
+		   // 			}else{
+		   // 				alert("您点击了NO");
+		   // 			}
+		   // });
+
+    //-----------------------自定义confirm弹窗---------------------
+    	Ext.Msg.show({
+    		title:'我是标题',
+    		msg:"你确定要关闭窗口吗",
+    		buttons:Ext.MessageBox.YESNO,
+    		icon:Ext.MessageBox.QUESTION,
+    		fn:function(button){
+    			if(button=="YES"){
+    				alert("你点击了Y");
+    			}else{
+    				alert("你点击了Y");
+    			}
+    		}
+    	});
+    });
+    </script>
+</body>
+
+</html>

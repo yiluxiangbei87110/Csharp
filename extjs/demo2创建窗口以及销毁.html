@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>extjs练习</title>
+	<link rel="stylesheet" href="classic/theme-neptune/resources/theme-neptune-all.css">
+	<script type="text/javascript" src="ext-all-debug.js"></script>
+	<script type="text/javascript" src="classic/theme-neptune/theme-neptune.js"></script>
+</head>
+<body>
+	<button id="btn">点击显示窗口</button>
+	<script type="text/javascript">
+		Ext.onReady(function(){
+			var win=Ext.create('Ext.window.Window',{
+				width:200,
+				height:300,
+				title:'创建一个window的对话框',
+				closeAction:'hide',//默认关闭就是销毁，当你再次打开时就会报错，此时应该说明是hide。
+				html:'var win=Ext.create----win.show()'
+			});
+			Ext.get("btn").on("click",function(){
+				win.show();
+			});
+		});
+	</script>
+</body>
+</html>
