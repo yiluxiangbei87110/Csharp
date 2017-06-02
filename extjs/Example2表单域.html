@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>extjsExample</title>
+    <link rel="stylesheet" href="classic/theme-neptune/resources/theme-neptune-all.css">
+    <script type="text/javascript" src="ext-all-debug.js"></script>
+    <script type="text/javascript" src="classic/theme-neptune/theme-neptune.js"></script>
+    <style type="text/css">
+    .mgt {
+        margin-top: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //参考网址 http://www.jeeboot.com/archives/1219.html 注意大小写
+    //-------------------------- Ext的 formfiled表单域   modern版本下才能设置Ext.form.password
+    // Ext.form.field.Checkbox
+    // Ext.form.field.Radio
+    // Ext.form.field.ComboBox
+    // Ext.form.field.Hidden
+    // Ext.form.field.Date
+    // Ext.form.field.Time
+    // Ext.form.field.Number
+    // Ext.form.field.text
+    // Ext.form.field.TextArea
+    // Ext.form.field.File
+    // Ext.form.field.HtmlEditor 
+    Ext.onReady(function() {
+        //----------Ext.form.field.Text 文本框-----------------
+        Ext.create("Ext.form.field.Text", {
+            renderTo: Ext.getBody(),
+            name: 'email',
+            fieldLabel: 'Email',
+            allowBlank: false,
+            vtype: 'email',
+            cls: 'mgt'
+        });
+        //classic下的密码框
+        Ext.create('Ext.form.field.Text', {
+            renderTo: Ext.getBody(),
+            fieldLabel: 'password',
+            name: 'password',
+            // vtype:'password',这种方式不行
+            inputType: 'password',
+            allowBlank: false,
+            cls: 'mgt'
+        });
+        //数字
+        Ext.create("Ext.form.field.Number", {
+            renderTo: Ext.getBody(),
+            name: 'email',
+            fieldLabel: 'count',
+            allowBlank: false,
+            minValue: 10,
+            maxValue: 100,
+            cls: 'mgt'
+        });
+        //文本域
+        Ext.create('Ext.form.field.TextArea', {
+            renderTo: Ext.getBody(),
+            name: 'TextArea',
+            fieldLabel: '文本域',
+            allowBlank: false,
+            cls: 'mgt'
+        });
+        //下拉框
+        var month = Ext.create('Ext.data.Store', {
+            fields: ['abbr', 'name'],
+            data: [{
+                "abbr": "JAN",
+                "name": "January"
+            }, {
+                "abbr": "FEB",
+                "name": "February"
+            }, {
+                "abbr": "MAR",
+                "name": "March"
+            }, {
+                "abbr": "APR",
+                "name": "April"
+            }, {
+                "abbr": "MAY",
+                "name": "May"
+            }, {
+                "abbr": "JUN",
+                "name": "June"
+            }, {
+                "abbr": "JUL",
+                "name": "July"
+            }, {
+                "abbr": "AUG",
+                "name": "August"
+            }, {
+                "abbr": "SEP",
+                "name": "September"
+            }, {
+                "abbr": "OCT",
+                "name": "October"
+            }, {
+                "abbr": "NOV",
+                "name": "November"
+            }, {
+                "abbr": "DEC",
+                "name": "December"
+            }]
+        });
+
+        Ext.create("Ext.form.field.ComboBox", {
+            fieldLabel: '选择日期',
+            store: month,
+            queryMode: 'local',
+            displayField: 'name',
+            valueField: 'abbr',
+            renderTo: Ext.getBody(),
+            cls: 'mgt'
+        });
+
+        //文本编辑器
+        Ext.create('Ext.form.field.HtmlEditor', {
+            fieldLabel: '文本编辑器',
+            width: 800,
+            height: 200,
+            renderTo: Ext.getBody(),
+            cls: 'mgt'
+        });
+
+        //-------------注意复选框的书写方式 Ext.form.CheckboxGroup--------------
+        Ext.create('Ext.form.CheckboxGroup', {
+            renderTo: Ext.getBody(),
+            fieldLabel: '科目',
+            vertical: true,
+            columns: 1,
+            cls: 'mgt',
+            items: [{
+                boxLabel: "c++",
+                name: 'sb',
+                inputValue: '1'
+            }, {
+                boxLabel: 'java',
+                name: 'sb',
+                inputValue: 'java'
+            }, {
+                boxLabel: 'c#',
+                name: 'sb',
+                inputValue: true
+            }, {
+                boxLabel: 'php',
+                name: 'sb',
+                inputValue: 'php'
+            }]
+        });
+        //Ext.form.RadioGroup
+        Ext.create('Ext.form.RadioGroup', {
+            renderTo: Ext.getBody(),
+            vertical: false,
+            columns: 1,
+            fieldLabel: '前端',
+            cls: 'mgt',
+            items: [{
+                boxLabel: "HTML",
+                inputValue: 1,
+                name: 'skill'
+            }, {
+                boxLabel: "CSS",
+                inputValue: 2,
+                name: 'skill'
+            }, {
+                boxLabel: "javascript",
+                inputValue: 3,
+                name: 'skill'
+            }]
+        });
+
+        //fieldContainer 可以将子项目包含在一个div里面
+        Ext.create('Ext.form.FieldContainer', {
+            renderTo: Ext.getBody(),
+            fieldLabel: 'Name',
+            layout: 'hbox',
+            combineErrors: true,
+            defaultType: 'textfield',
+            cls:'mgt',
+            defaults: {
+                hideLabel: 'true'
+            },
+            items: [{
+                name: 'firstName',
+                fieldLabel: 'First Name',
+                flex: 2,
+                emptyText: 'First',
+                allowBlank: false
+            }, {
+                name: 'lastName',
+                fieldLabel: 'Last Name',
+                flex: 3,
+                margin: '0 0 0 6',
+                emptyText: 'Last',
+                allowBlank: false
+            }]
+        });
+
+    });
+    </script>
+</body>
+
+</html>
