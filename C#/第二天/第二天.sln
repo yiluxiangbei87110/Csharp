@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo92抽象实例", "Demo9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo94序列花和反序列化", "Demo94序列花和反序列化\Demo94序列花和反序列化.csproj", "{C797499E-7CDF-4B45-9A02-92182CBFE492}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo95接口", "Demo95接口\Demo95接口.csproj", "{EF8685B3-7C73-4F13-B229-A5B23C0A2CD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{C797499E-7CDF-4B45-9A02-92182CBFE492}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C797499E-7CDF-4B45-9A02-92182CBFE492}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C797499E-7CDF-4B45-9A02-92182CBFE492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF8685B3-7C73-4F13-B229-A5B23C0A2CD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF8685B3-7C73-4F13-B229-A5B23C0A2CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF8685B3-7C73-4F13-B229-A5B23C0A2CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF8685B3-7C73-4F13-B229-A5B23C0A2CD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
