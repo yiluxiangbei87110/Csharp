@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demo91抽象", "demo91抽�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo92抽象实例", "Demo92抽象实例\Demo92抽象实例.csproj", "{206C3A00-4CEF-4D1E-BA8B-2F09A0965CE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo94序列花和反序列化", "Demo94序列花和反序列化\Demo94序列花和反序列化.csproj", "{C797499E-7CDF-4B45-9A02-92182CBFE492}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{206C3A00-4CEF-4D1E-BA8B-2F09A0965CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{206C3A00-4CEF-4D1E-BA8B-2F09A0965CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{206C3A00-4CEF-4D1E-BA8B-2F09A0965CE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C797499E-7CDF-4B45-9A02-92182CBFE492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C797499E-7CDF-4B45-9A02-92182CBFE492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C797499E-7CDF-4B45-9A02-92182CBFE492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C797499E-7CDF-4B45-9A02-92182CBFE492}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
