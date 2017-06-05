@@ -12,8 +12,8 @@ namespace Demo9复制文件
         static void Main(string[] args)
         {
             //复制文件，其实就是先读后写
-            string source = @"D:\huahai.mp4";
-            string target = @"D:\huahai2.mp4";
+            string source = @"F:\前端\百度云\Lesson1\录像\lesson1_1.exe";
+            string target = @"F:\前端\百度云\Lesson1\录像\lesson1.avi";
             CopyFile(source,target);
             Console.WriteLine("复制ok");
             Console.ReadKey();

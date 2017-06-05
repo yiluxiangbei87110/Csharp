@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo94序列花和反序列
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo95接口", "Demo95接口\Demo95接口.csproj", "{EF8685B3-7C73-4F13-B229-A5B23C0A2CD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "superMarket", "superMarket\superMarket.csproj", "{0D39079C-A14A-48D8-A136-AC6D8A7ECC9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{EF8685B3-7C73-4F13-B229-A5B23C0A2CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF8685B3-7C73-4F13-B229-A5B23C0A2CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF8685B3-7C73-4F13-B229-A5B23C0A2CD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D39079C-A14A-48D8-A136-AC6D8A7ECC9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D39079C-A14A-48D8-A136-AC6D8A7ECC9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D39079C-A14A-48D8-A136-AC6D8A7ECC9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D39079C-A14A-48D8-A136-AC6D8A7ECC9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
