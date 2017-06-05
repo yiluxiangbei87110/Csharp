@@ -12,6 +12,7 @@ namespace Demo1通过构造函数去调用另一个构造函数this
         private int _age;
         private char _gender;
         private string _hobby;
+        private double _salary;
 
         public string Name
         {
@@ -65,18 +66,34 @@ namespace Demo1通过构造函数去调用另一个构造函数this
             }
         }
 
+        public double Salary
+        {
+            get
+            {
+                return _salary;
+            }
+
+            set
+            {
+                _salary = value;
+            }
+        }
+
         public Person(string name,int age,char gender,string hobby)
         {
             this.Name = name;
             this.Age = age;
             this.Gender = gender;
             this.Hobby = hobby;
+            Console.WriteLine("我叫{0}，我今年{1}岁了，我是{2}生，我的爱好是{3}", this.Name, this.Age, this.Gender, this.Hobby);
         }
-
-        public Person(string name,int age,char gender) : this(name, age, gender)
+        //使用上面的没有就给默认值
+        public Person(string name,int age,char gender,double salary) : this(name, age, gender,"dance")
         {
-
+            this.Salary = salary;
+            Console.WriteLine("我叫{0}，我今年{1}岁了，我是{2}生，我的工资是{3}元",this.Name,this.Age,this.Gender,this.Salary);
         }
+
     }
 
 }
