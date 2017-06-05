@@ -10,7 +10,12 @@ namespace Demo2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("122222");
+            Console.WriteLine("请输入一个数字");
+            string str = Console.ReadLine();
+            int num = Convert.ToInt16(str);
+            Console.WriteLine("你输入的是{0}", num);
+            Console.WriteLine("你输入的是"+str);
+            Console.WriteLine("你输入的是{0}", str);
             Console.ReadKey();
         }
     }
