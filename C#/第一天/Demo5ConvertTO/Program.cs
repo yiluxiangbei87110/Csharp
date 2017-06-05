@@ -15,7 +15,9 @@ namespace Demo5ConvertTO
             Console.WriteLine("请输入你的成绩");
             try
             {
-                scoreRe = Convert.ToDouble(Console.ReadLine());
+                //由于接收的是字符串，所以需转换，下面是两种方式。
+                //scoreRe = Convert.ToDouble(Console.ReadLine());
+                scoreRe = double.Parse(Console.ReadLine());
             }
             catch
             {
@@ -27,16 +29,9 @@ namespace Demo5ConvertTO
                 Console.WriteLine("你的成绩是{0}", scoreRe);
             }else
             {
-                Console.WriteLine("not  ok ");
+                Console.WriteLine("fail!");
             }
             Console.WriteLine('1');
-            Console.WriteLine('2');
-            Console.WriteLine('3');
-            Console.WriteLine('4');
-            Console.WriteLine('5');
-            Console.WriteLine('6');
-            Console.WriteLine('7');
-            Console.WriteLine('8');
             Console.ReadKey();
         }
     }

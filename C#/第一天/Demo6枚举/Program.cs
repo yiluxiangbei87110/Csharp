@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace Demo6枚举
 {
-    public enum Gender{
+    public enum Gender
+    {
         male,
-        female
+        female,
+        other
     }
-
     class Program
     {
         static void Main(string[] args)
         {
-            Gender gender = Gender.female;
+            Gender gender = Gender.female;  
         }
     }
 }

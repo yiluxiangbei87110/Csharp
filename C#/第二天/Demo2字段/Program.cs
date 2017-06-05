@@ -13,7 +13,7 @@ namespace Demo2字段
             // 创建Person类的对象
             Person P = new Person();
             P.Name = "Felix";
-            P.Age = 3;
+            P.Age = 300;
             P.Say();
             Console.ReadKey();
         }
