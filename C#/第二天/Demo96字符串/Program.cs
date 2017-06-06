@@ -11,7 +11,7 @@ namespace Demo96字符串
         static void Main(string[] args)
         {
             //字符串的操作(可以将字符串当做char类型的只读数组)
-            string str = "absckdjsdkjkfj";
+            string str = "abRRHkdjsdkjkfj";
             Console.WriteLine(str[0]);//a
             //str[0] = 'f'; error:它是只读的，不可写
             for(int i = 0; i < str.Length; i++)
@@ -25,6 +25,9 @@ namespace Demo96字符串
             //将char类型的数组转换成string类型
             str = new string(ch);
             //str[0] = 'g'; error:它是只读的。
+            //ToUpper toLower 转化为大小写
+            str = str.ToLower();
+            Console.WriteLine(str);
             Console.ReadKey();
         }
     }

@@ -11,8 +11,9 @@ namespace Demo4继承
         static void Main(string[] args)
         {
             Student s = new Student();
-            s.Name = "Felix";//注意可以公有属性，不能访问私有字段
-            s.Say();
+            Teacher T = new Teacher();
+            //s.Name = "Felix";
+            //s.Say();
             Console.ReadKey();
         }
     }
@@ -35,12 +36,15 @@ namespace Demo4继承
         {
             Console.WriteLine("我是父类的方法，子类都可以访问我哦！");
         }
+        public Person()
+        {
+            Console.WriteLine("我是父类默认的构造方法");
+        }
 
     }
     //注意原则上应该每创建一个类就要有一个类库，此时我们不区分。
     public class Student : Person
     {
-
         private int _id;
         public int Id
         {

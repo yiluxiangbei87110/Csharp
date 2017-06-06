@@ -9,7 +9,7 @@ namespace Demo6集合
     class Program
     {
         static void Main(string[] args)
-        {   //创建一个集合，并且放入一些数字，求出之和
+        {   //问题1：创建一个集合，并且放入一些数字，求出之和
             //ArrayList ls = new ArrayList();
             //ls.AddRange(new int[] { 1, 2, 3, 4, 56, 7 });
             //int sum = 0;
@@ -19,10 +19,9 @@ namespace Demo6集合
             //}
             //Console.WriteLine(sum);
             //Console.ReadKey();
-            //随机打印出不重复的0-9数字
+            //问题2：随机打印出不重复的0-9数字
             ArrayList list = new ArrayList();
             Random rd = new Random();
-            //为什么不能用10代替list.count(list.count表示是真实的数量，刚开始是0，不满足）
             for(int i = 0; i < 10; i++)
             {
                 int rNumber = rd.Next(0, 10);//0-9

@@ -12,6 +12,7 @@ namespace Demo5继承中的构造函数
         {
             Student s = new Student("xueshengFelix",2,2013);
             Teacher t = new Teacher("laoshi", 2, 6000);
+            s.Say();
             Console.ReadKey();
         }
     }
@@ -44,6 +45,10 @@ namespace Demo5继承中的构造函数
     //注意原则上应该每创建一个类就要有一个类库，此时我们不区分。
     public class Student : Person
     {
+        public new void Say()
+        {
+            Console.WriteLine("我是子类的say方法，我覆盖掉了父类的say方法");
+        }
         public Student(string name,int gender,int id):base(name,gender)
         {
             this.Id = id;
