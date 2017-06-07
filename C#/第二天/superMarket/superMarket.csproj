@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Acer.cs" />
     <Compile Include="Banana.cs" />
+    <Compile Include="CangKu.cs" />
+    <Compile Include="JiangYou.cs" />
     <Compile Include="ProductFather.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
