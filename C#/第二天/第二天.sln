@@ -15,13 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo6集合", "Demo6集合\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo6Hashtable键值对集合", "Demo6Hashtable键值对集合\Demo6Hashtable键值对集合.csproj", "{7561EFB9-1FBD-4288-8D5C-1B3D36F0A07F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9复制文件", "Demo9复制文件\Demo9复制文件.csproj", "{D29D9D6A-3AD5-42EF-B6DD-544AC3404A4A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demo91抽象", "demo91抽象\demo91抽象.csproj", "{9F7757C0-D217-44CB-A0B9-C61B2DF2FEAF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo92抽象实例", "Demo92抽象实例\Demo92抽象实例.csproj", "{206C3A00-4CEF-4D1E-BA8B-2F09A0965CE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo94序列花和反序列化", "Demo94序列花和反序列化\Demo94序列花和反序列化.csproj", "{C797499E-7CDF-4B45-9A02-92182CBFE492}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo94序列化和反序列化", "Demo94序列花和反序列化\Demo94序列化和反序列化.csproj", "{C797499E-7CDF-4B45-9A02-92182CBFE492}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo95接口", "Demo95接口\Demo95接口.csproj", "{EF8685B3-7C73-4F13-B229-A5B23C0A2CD0}"
 EndProject
@@ -57,6 +55,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo8文件的操作2", "De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo8文件的操作3", "Demo8文件的操作3\Demo8文件的操作3.csproj", "{A8AC1E3F-C474-4406-9B8F-3CE09678BE79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9文件流FileStream1", "Demo9文件流FileStream1\Demo9文件流FileStream1.csproj", "{78E7A38E-C813-429C-A885-4742CE1A6277}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9文件流FileStream复制文件", "Demo9文件流FileStream复制文件\Demo9文件流FileStream复制文件.csproj", "{E1937008-9921-479E-B499-9CF13E487ED3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9字节流StreamReader和StreamWriter", "Demo9字节流StreamReader和StreamWriter\Demo9字节流StreamReader和StreamWriter.csproj", "{FC3E4D75-89F7-4F69-9BA5-9AC9729C3CBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo97多态virtual方法", "Demo97多态virtual方法\Demo97多态virtual方法.csproj", "{C63FF889-41DF-494E-AFD9-4A7EE9A5FE94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9多态之抽象实现", "Demo9多态之抽象实现\Demo9多态之抽象实现.csproj", "{8A6F9402-3301-4FB1-8ADB-2D6576AF8163}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,10 +95,6 @@ Global
 		{7561EFB9-1FBD-4288-8D5C-1B3D36F0A07F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7561EFB9-1FBD-4288-8D5C-1B3D36F0A07F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7561EFB9-1FBD-4288-8D5C-1B3D36F0A07F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D29D9D6A-3AD5-42EF-B6DD-544AC3404A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D29D9D6A-3AD5-42EF-B6DD-544AC3404A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D29D9D6A-3AD5-42EF-B6DD-544AC3404A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D29D9D6A-3AD5-42EF-B6DD-544AC3404A4A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9F7757C0-D217-44CB-A0B9-C61B2DF2FEAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9F7757C0-D217-44CB-A0B9-C61B2DF2FEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F7757C0-D217-44CB-A0B9-C61B2DF2FEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -171,6 +175,26 @@ Global
 		{A8AC1E3F-C474-4406-9B8F-3CE09678BE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8AC1E3F-C474-4406-9B8F-3CE09678BE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8AC1E3F-C474-4406-9B8F-3CE09678BE79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78E7A38E-C813-429C-A885-4742CE1A6277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E7A38E-C813-429C-A885-4742CE1A6277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E7A38E-C813-429C-A885-4742CE1A6277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E7A38E-C813-429C-A885-4742CE1A6277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1937008-9921-479E-B499-9CF13E487ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1937008-9921-479E-B499-9CF13E487ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1937008-9921-479E-B499-9CF13E487ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1937008-9921-479E-B499-9CF13E487ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC3E4D75-89F7-4F69-9BA5-9AC9729C3CBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC3E4D75-89F7-4F69-9BA5-9AC9729C3CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC3E4D75-89F7-4F69-9BA5-9AC9729C3CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC3E4D75-89F7-4F69-9BA5-9AC9729C3CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C63FF889-41DF-494E-AFD9-4A7EE9A5FE94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C63FF889-41DF-494E-AFD9-4A7EE9A5FE94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C63FF889-41DF-494E-AFD9-4A7EE9A5FE94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C63FF889-41DF-494E-AFD9-4A7EE9A5FE94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A6F9402-3301-4FB1-8ADB-2D6576AF8163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A6F9402-3301-4FB1-8ADB-2D6576AF8163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A6F9402-3301-4FB1-8ADB-2D6576AF8163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A6F9402-3301-4FB1-8ADB-2D6576AF8163}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

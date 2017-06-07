@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace Demo94序列花和反序列化
+namespace Demo94序列化和反序列化
 {
     class Program
     {
         static void Main(string[] args)
         {
+             //模拟发送
             //person p = new person();
             //p.age = 12;
             //p.name = "felix";
@@ -22,9 +23,11 @@ namespace Demo94序列花和反序列化
             //    console.writeline("ok");
 
             //}
+            //模拟接收
             Person p;
             using(FileStream fsRead=new FileStream(@"c:\users\administrator\desktop\111.txt", FileMode.OpenOrCreate, FileAccess.Read))
             {
+               
                 BinaryFormatter bf = new BinaryFormatter();
                 p=(Person)bf.Deserialize(fsRead);//强转为person类型的
                 Console.WriteLine(p.Name);
