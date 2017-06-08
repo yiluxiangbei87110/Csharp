@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo97多态virtual方法",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo9多态之抽象实现", "Demo9多态之抽象实现\Demo9多态之抽象实现.csproj", "{8A6F9402-3301-4FB1-8ADB-2D6576AF8163}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Md5", "Md5\Md5.csproj", "{8A1EE27C-634C-4D2E-AA4D-D87D17045268}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -195,6 +197,10 @@ Global
 		{8A6F9402-3301-4FB1-8ADB-2D6576AF8163}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A6F9402-3301-4FB1-8ADB-2D6576AF8163}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A6F9402-3301-4FB1-8ADB-2D6576AF8163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A1EE27C-634C-4D2E-AA4D-D87D17045268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A1EE27C-634C-4D2E-AA4D-D87D17045268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A1EE27C-634C-4D2E-AA4D-D87D17045268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A1EE27C-634C-4D2E-AA4D-D87D17045268}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
