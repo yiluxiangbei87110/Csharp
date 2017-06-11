@@ -13,7 +13,7 @@ namespace superMarket
             get;
             set;
         }
-        public double Count
+        public string Name
         {
             get;
             set;
@@ -23,11 +23,11 @@ namespace superMarket
             get;
             set;
         }
-        public ProductFather(string id, double count,double price)
+        public ProductFather(string id, double price,string  name)
         {
             this.ID = id;
             this.Price = price;
-            this.Count = count;
+            this.Name = name;
         }
     }
 }

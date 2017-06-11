@@ -8,7 +8,7 @@ namespace superMarket
 {
     class Acer:ProductFather
     {
-        public Acer(string id,double price,double count) : base(id, price, count)
+        public Acer(string id,double price,string name) : base(id, price, name)
         {
 
         }

@@ -8,7 +8,7 @@ namespace superMarket
 {
     class JiangYou : ProductFather
     {
-        public JiangYou(string id, double price, double count) : base(id, price, count)
+        public JiangYou(string id, double price, string name) : base(id, price, name)
         {
 
         }

@@ -8,7 +8,7 @@ namespace superMarket
 {
     class Banana:ProductFather
     {
-        public Banana(string id,double price,double count):base(id,price,count)
+        public Banana(string id,double price,string name):base(id,price,name)
         {
 
         }

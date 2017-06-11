@@ -8,7 +8,7 @@ namespace superMarket
 {
     class SumSung:ProductFather
     {
-        public SumSung(string id,double price,double count) : base(id, price, count)
+        public SumSung(string id,double price,string name ) : base(id, price, name)
         {
 
         }
