@@ -23,19 +23,23 @@ namespace superMarket
         public void AskBuying()
         {
             Console.WriteLine("请问您要什么东西？");
-            Console.WriteLine("我们有鸿基电脑，三星手机，香蕉，酱油");
             string strType = Console.ReadLine();
             Console.WriteLine("需要多少");
             int count = Convert.ToInt32(Console.ReadLine());
             //取货物
              ProductFather[] pros= ck.QuPros(strType,count);
             //下面该就算价钱了
-            double realMoney = getMoney(pros);
+            double realMoney = GetMoney(pros);
             Console.WriteLine("您总共应该付款{0}元",realMoney);
-
+            Console.WriteLine("请选择您的打折方式1--不打折，2--打9折，3-85折,4--满300减50，满500减100");
+            string input = Console.ReadLine();
+            //根据用户输入，获得一个打折对象。
+            CalFather cal = GetCal(input);
+            double totalMoney=cal.GetToatalMoney(realMoney);
+            Console.WriteLine("打完折，您应该付款{0}元",totalMoney);
         }
         //结算
-        public double getMoney(ProductFather[] pros)
+        public double GetMoney(ProductFather[] pros)
         {
             double realMonery = 0;
             for(int i = 0; i < pros.Length; i++)
@@ -44,5 +48,36 @@ namespace superMarket
             }
             return realMonery;
         }
+        //打折方式 。根据用户输入，获得一个打折对象。选择打折对象，返回父类对象，但是里面装的是子类对象（屏蔽差异性）
+        public CalFather GetCal(string input)
+        {
+            CalFather cal = null;
+            switch (input)
+            {
+                case "1":
+                    cal = new CalNormal();
+                    break;
+                case "2":
+                    cal = new CalRate(0.9);
+                    break;
+                case "3":
+                    cal = new CalRate(0.85);
+                    break;
+                case "4":
+                    cal = new CalMN(300,50);
+                    break;
+                case "5":
+                    cal = new CalMN(500,100);
+                    break;
+            }
+            return cal;
+        }
+        
+        //展示货物
+        public void showPros()
+        {
+            ck.showpros();
+        }
+
     }
 }

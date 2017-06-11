@@ -29,7 +29,7 @@ namespace superMarket
         {
             foreach(var item in list)
             {
-                Console.WriteLine("超市有"+item[0].Name,item.Count);
+                Console.WriteLine("我们超市有：" + item[0].Name + "," + "\t" + "有" + item.Count + "个," + "\t" + "每个" + item[0].Price + "元");
             }
         }
         /// <summary>
@@ -63,7 +63,7 @@ namespace superMarket
         {
             //也可以用集合，但是数组已经够用了。
             ProductFather[] pros = new ProductFather[count];
-            for(int i = 0; i < count; i++)
+            for(int i = 0; i < pros.Length; i++)
             {
                 switch (strType)
                 {
@@ -80,7 +80,7 @@ namespace superMarket
                     case "SunSung":
                         if (list[0].Count != 0)
                         {
-                            pros[i] = list[0][0];
+                            pros[i] = list[1][0];
                             list[0].RemoveAt(0);
                         }
                         else
@@ -91,7 +91,7 @@ namespace superMarket
                     case "Banana":
                         if (list[0].Count != 0)
                         {
-                            pros[i] = list[0][0];
+                            pros[i] = list[2][0];
                             list[0].RemoveAt(0);
                         }
                         else
@@ -102,7 +102,7 @@ namespace superMarket
                     case "JiangYou":
                         if (list[0].Count != 0)
                         {
-                            pros[i] = list[0][0];
+                            pros[i] = list[3][0];
                             list[0].RemoveAt(0);
                         }
                         else
