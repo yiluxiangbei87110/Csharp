@@ -10,9 +10,9 @@ namespace superMarket
     {
         static void Main(string[] args)
         {   //创建超市对象
-            superMarket sm = new superMarket();
+            SuperMarket sm = new SuperMarket();
             //展示货物
-            sm.showPros();
+            sm.ShowPros();
             //用户交互
             sm.AskBuying();
             Console.ReadKey();

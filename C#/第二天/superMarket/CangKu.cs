@@ -25,7 +25,7 @@ namespace superMarket
             list.Add(new List<ProductFather>());
             list.Add(new List<ProductFather>());
         }
-        public void showpros()
+        public void Showpros()
         {
             foreach(var item in list)
             {
@@ -112,7 +112,7 @@ namespace superMarket
                         break;
                 }
             }
-            return null;
+            return pros;
         }
     }
 }

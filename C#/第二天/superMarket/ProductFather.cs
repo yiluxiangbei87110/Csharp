@@ -28,6 +28,8 @@ namespace superMarket
             this.ID = id;
             this.Price = price;
             this.Name = name;
+            Console.WriteLine("我是父类的方法");
         }
     }
 }
+//注意子类会调用父类默认的无参构造方法，如果父类没有的话子类会报错，此时可以这样给父类添加一个无参构造函数，或者子类：base父类的构造函数。

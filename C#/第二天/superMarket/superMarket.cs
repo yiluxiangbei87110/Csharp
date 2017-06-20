@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace superMarket
 {
-    class superMarket
+    class SuperMarket
     {   
         /// <summary>
         /// 创建超市对象到时候，给仓库的货架导入货物
         /// </summary>
         CangKu ck = new CangKu();
-        public superMarket()
+        public SuperMarket()
         {
             ck.JinPros("Acer", 100);
             ck.JinPros("SumSung", 100);
@@ -24,19 +24,25 @@ namespace superMarket
         {
             Console.WriteLine("请问您要什么东西？");
             string strType = Console.ReadLine();
-            Console.WriteLine("需要多少");
-            int count = Convert.ToInt32(Console.ReadLine());
-            //取货物
-             ProductFather[] pros= ck.QuPros(strType,count);
-            //下面该就算价钱了
-            double realMoney = GetMoney(pros);
-            Console.WriteLine("您总共应该付款{0}元",realMoney);
-            Console.WriteLine("请选择您的打折方式1--不打折，2--打9折，3-85折,4--满300减50，满500减100");
-            string input = Console.ReadLine();
-            //根据用户输入，获得一个打折对象。
-            CalFather cal = GetCal(input);
-            double totalMoney=cal.GetToatalMoney(realMoney);
-            Console.WriteLine("打完折，您应该付款{0}元",totalMoney);
+            if(strType!="Acer" && strType != "SumSung" && strType != "JiangYou" && strType != "Banana")
+            {
+                Console.WriteLine("我们商店没有这种商品！");
+            }else
+            {
+                Console.WriteLine("需要多少");
+                int count = Convert.ToInt32(Console.ReadLine());
+                //取货物
+                ProductFather[] pros = ck.QuPros(strType, count);
+                //下面该就算价钱了
+                double realMoney = GetMoney(pros);
+                Console.WriteLine("您总共应该付款{0}元", realMoney);
+                Console.WriteLine("请选择您的打折方式1--不打折，2--打9折，3-85折,4--满300减50，满500减100");
+                string input = Console.ReadLine();
+                //根据用户输入，获得一个打折对象。
+                CalFather cal = GetCal(input);
+                double totalMoney = cal.GetToatalMoney(realMoney);
+                Console.WriteLine("打完折，您应该付款{0}元", totalMoney);
+            }
         }
         //结算
         public double GetMoney(ProductFather[] pros)
@@ -74,9 +80,9 @@ namespace superMarket
         }
         
         //展示货物
-        public void showPros()
+        public void ShowPros()
         {
-            ck.showpros();
+            ck.Showpros();
         }
 
     }
