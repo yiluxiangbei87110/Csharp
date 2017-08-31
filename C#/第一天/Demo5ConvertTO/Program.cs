@@ -31,7 +31,6 @@ namespace Demo5ConvertTO
             {
                 Console.WriteLine("fail!");
             }
-            Console.WriteLine('1');
             Console.ReadKey();
         }
     }

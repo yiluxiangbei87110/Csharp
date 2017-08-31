@@ -24,7 +24,6 @@ namespace Demo4占位符
             string ans = Console.ReadLine();
             Console.WriteLine("好巧，张三也喜欢吃{0}",ans);
             Console.ReadKey();
-
         }
     }
 }

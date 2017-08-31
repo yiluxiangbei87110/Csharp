@@ -16,6 +16,8 @@ namespace Demo1
             Console.ReadKey();
             Console.WriteLine("Hello world3");
             Console.ReadKey();
+            Console.WriteLine("preview");
+            Console.ReadKey();
         }
     }
 }

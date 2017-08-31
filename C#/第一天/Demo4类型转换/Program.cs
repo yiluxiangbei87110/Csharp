@@ -24,6 +24,10 @@ namespace Demo4类型转换
             //Next(MaxValue)随机产生小于最大数的整数
             Random random = new Random();
             Console.WriteLine("产生的随机数是{0}",random.Next(1, 9));
+            for(int i = 0; i < 100; i++)
+            {
+                Console.Write(random.Next(1, 9)+" ");
+            }
             Console.ReadKey();
         }
     }
