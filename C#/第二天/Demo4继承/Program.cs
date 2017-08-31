@@ -12,8 +12,8 @@ namespace Demo4继承
         {
             Student s = new Student();
             Teacher T = new Teacher();
-            //s.Name = "Felix";
-            //s.Say();
+            s.Name = "Felix";
+            s.Say();
             Console.ReadKey();
         }
     }
