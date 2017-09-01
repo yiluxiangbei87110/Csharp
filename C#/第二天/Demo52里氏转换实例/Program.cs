@@ -57,4 +57,5 @@ namespace Demo52里氏转换实例
             Console.WriteLine("Leader Sayhello方法");
         }
     }
+
 }

@@ -29,6 +29,9 @@ namespace Demo95接口
         }
 
     }
+
+
+    //接口是public的，没有字段，属性是自动属性，成员不需要写修饰符（默认是public的，写了反而会报错）
     public class Person : Flyable
     {   
         public void Fly()

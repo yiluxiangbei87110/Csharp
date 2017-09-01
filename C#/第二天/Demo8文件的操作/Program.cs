@@ -11,7 +11,7 @@ namespace Demo8文件的操作
     {
         static void Main(string[] args)
         {
-            //File create 创建文件，如果本身已经有啦，则会覆盖掉。（包括内容也变成了空白）。
+            //创建文件，如果本身已经有啦，则会覆盖掉。（包括内容也变成了空白）。
             //File.Create(@"C:\Users\LQC\Desktop\test1.txt");
             //Console.WriteLine("创建成功！");
 

@@ -10,7 +10,7 @@ namespace demo91抽象
     {
         static void Main(string[] args)
         {
-            //狗叫 猫也叫  无法实例化抽象或借口类
+            //狗叫 猫也叫  无法实例化抽象或接口类
             //Animal a = new Animal();
             //虽然赋给了父类，但是其子类重写了父类的抽象方法，所以依然是子类的方法
             Animal a = new Dog();
@@ -41,5 +41,6 @@ namespace demo91抽象
         }
     }
 
+    //this 和 base的区别是不是 调用 本类构造函数和基类构造函数的问题。
 
 }

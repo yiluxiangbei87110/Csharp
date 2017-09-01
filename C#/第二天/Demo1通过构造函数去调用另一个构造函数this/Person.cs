@@ -78,6 +78,7 @@ namespace Demo1通过构造函数去调用另一个构造函数this
                 _salary = value;
             }
         }
+       //this的作用，一是代表当前对象，二是继承构造函数。
 
         public Person(string name,int age,char gender,string hobby)
         {
