@@ -27,7 +27,6 @@ namespace Demo1Directory
             Directory.Move(@"C:\b", @"C:\Users\Administrator\Desktop\new");
             Console.WriteLine("剪切成功");
             Console.ReadKey();
-
         }
     }
 }
