@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+		body{
+			font-size: 20px;
+		}
+    </style>
+</head>
+
+<body>
+    <pre>
+			--标准sql语句对大小写不敏感
+
+			create database DB1
+			use DB1 
+			create table tb1
+			(
+				Id_P int NOT NULL,
+				LastName varchar(255) NOT NULL,
+				FirstName varchar(255),
+				Address varchar(255),
+				City varchar(255)
+			)
+
+			ALTER TABLE 语句用于在已有的表中添加、修改或删除列。
+
+			--表中新增一个生日字段 (add)
+			Alter table Persons add Birthday data
+
+			--修改表中的birthday 类型(alter column)
+			alter table Persons alter column Birthday year
+
+			--删除
+			alter table Persons drop column Birthday
+
+
+
+			--查询
+			select * from Table1
+
+			select name,age from Table1
+
+			select distinct name from Table1 --除去重复的数据
+
+			select * from Orders where city='beijing' --注意文本值使用的是单引号 >= <> between like
+
+			select * from Persons where firstname='zhangsan' and lastname='lisi'
+
+			select * from Persons where firstname='zhangsan' or lastname='lisi'
+
+			select * from Persons where (firstname='zhansan' or firstname='Felix' ) and lastName='lisi'
+
+			select company,orderNumber from Orders order BY company
+
+			select company,orderNumber from orders order by company desc(按逆字母顺序显示公司名称)
+
+			select company,orderNumber from orders order by company desc,orderNumber ASC(按逆字母顺序显示公司名称，订单号顺序显示)
+
+			--插入数据
+			insert into  Persons (name,age,address) values('Felix',10,'roadA')
+
+			--更新数据
+			update Perosns set name='wangwu',age=12 where address='roadA'
+
+			--删除数据
+			delete from Persons where name='zhangsan'
+
+			delete from Persons where 1=1
+
+			--top语法
+
+			---like 语法 查询表中地址以r开头的数据
+			select * from Persons where address like  'r%'
+			--查询地址中以A结尾的数据
+			select * from Persons where address like '%A'
+			--查询地址中包含ad的数据
+			select * from Persons where address like '%ad%'
+			--查询地址中不包含ad的数据 (not like)
+			select * from Persons where address not like '%ad%'
+
+
+			--between 名字在zhansan 和lisi之间的人（不包括尾）
+			select * from Persons where name between 'zhangsan' and 'lisi'
+
+			--aliases 别名
+
+			--没有join的情况下 
+
+			select Persons.name,Persons.address ,Orders.orderNumber from Persons,Orders where Persons.Id_p=Orders.Id_p
+
+			--有join的情况下 join和inner join 是同一个意思
+			select Persons.name,Persons.address,Orders.orderNumber from Persons inner join Orders on Persons.Id_p=Orders.Id_p orders by Persons.name
+
+			--left join  左连接，关键字会从左表 (table_name1) 那里返回所有的行，即使在右表 (table_name2) 中没有匹配的行。 返回用户的名字地址，如果有订单，则返回订单数据。
+			select Persons.name,Persons.address,Orders.orderNum  from Persons left join Orders on Persons.Id_p=Orders.Id_p orders by Prsons.name
+
+			--right join 右连接 即便没有用户名和地址 我们也要将右表中的订单给列出来。
+
+			select Persons.name,Persons.age,Orders.orderNum from Persons right join Orders on Persons.Id_p=Orders.Id_p orders by Persons.name desc 
+
+			--full join  全连接 只要其中的某个表存在相应的的数据我们
+
+			--union
+	</pre>
+</body>
+
+</html>
