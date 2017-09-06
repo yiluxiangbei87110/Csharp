@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo3委托", "Demo3委托\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo2委托2", "Demo2委托2\Demo2委托2.csproj", "{673CAEF9-BA5A-4AAA-8E52-5698647727C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sqlConnection", "sqlConnection\sqlConnection.csproj", "{FBE26860-1AA8-4038-A649-DA2F180F4D00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{673CAEF9-BA5A-4AAA-8E52-5698647727C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{673CAEF9-BA5A-4AAA-8E52-5698647727C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{673CAEF9-BA5A-4AAA-8E52-5698647727C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE26860-1AA8-4038-A649-DA2F180F4D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE26860-1AA8-4038-A649-DA2F180F4D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE26860-1AA8-4038-A649-DA2F180F4D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE26860-1AA8-4038-A649-DA2F180F4D00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
