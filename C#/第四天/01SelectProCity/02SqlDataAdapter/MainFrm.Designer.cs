@@ -35,11 +35,12 @@
             // dgvDB1
             // 
             this.dgvDB1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDB1.Location = new System.Drawing.Point(28, 49);
+            this.dgvDB1.Location = new System.Drawing.Point(12, 40);
             this.dgvDB1.Name = "dgvDB1";
             this.dgvDB1.RowTemplate.Height = 23;
             this.dgvDB1.Size = new System.Drawing.Size(196, 134);
             this.dgvDB1.TabIndex = 0;
+            this.dgvDB1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDB1_CellContentClick);
             // 
             // MainFrm
             // 

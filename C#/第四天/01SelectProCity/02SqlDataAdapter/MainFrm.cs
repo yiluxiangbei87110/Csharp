@@ -17,10 +17,11 @@ namespace _02SqlDataAdapter
         public MainFrm()
         {
             InitializeComponent();
+            //把表中的数据加载到窗体
             string conStr = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(conStr))
             {
-                string sql = "select * from dbo.AreaFull";
+                string sql = "select * from dbo.StudentInfo";
                 using (SqlDataAdapter adapter = new SqlDataAdapter(sql, conn))
                 {
                     DataTable dt = new DataTable();
@@ -31,12 +32,15 @@ namespace _02SqlDataAdapter
                 }
             }
         }
-        //视频里有这个方法，但是我操作没有.经过实验，不需要多次一举，放到上面函数体里就行了。
+       
         private void MainFrm_Load(object sender,EventArgs e)
         {
-            //把表中的数据加载到窗体
-
            
+        }
+
+        private void dgvDB1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
