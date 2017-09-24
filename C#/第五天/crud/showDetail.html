@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>查询结果</title>
+    <style>
+        #table tr {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: rgb(235, 242, 224);
+        }
+
+        #table {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(235, 242, 224);
+            width: 100%;
+        }
+
+            #table td, #table th {
+                padding: 5px 10px;
+                font-size: 12px;
+                font-family: Verdana;
+                color: rgb(149, 170, 109);
+                text-align: center;
+            }
+
+            #table tr:nth-child(even) {
+                background: rgb(230, 238, 214);
+            }
+
+            #table tr:nth-child(odd) {
+                background: #FFF;
+            }
+    </style>
+</head>
+<body>
+    <table id="table">
+        <tr><td>用户名</td><td>密码</td></tr>
+        <tr><td>$name</td><td>$pwd</td></tr>
+    </table>
+</body>
+</html>
