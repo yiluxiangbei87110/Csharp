@@ -15,7 +15,7 @@ namespace Demo1.dal
         {
             string sql = "select * from UserInfo";
             DataTable dt=SqlHelper.GetDataTable(sql,CommandType.Text);
-            List<UserInfo> list = null;
+            List<UserInfo> list = new List<UserInfo>();
             if (dt.Rows.Count>0)
             {
                 UserInfo userInfo = null;
@@ -38,3 +38,6 @@ namespace Demo1.dal
         }
     }
 }
+
+
+

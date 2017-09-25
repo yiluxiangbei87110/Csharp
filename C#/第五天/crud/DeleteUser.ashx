@@ -27,7 +27,7 @@ public class DeleteUser : IHttpHandler {
                     context.Response.Redirect("UserInfoList.ashx");
                 }else
                 {
-                        context.Response.Redirect("http://www.baidu.com");
+                    context.Response.Redirect("http://www.baidu.com");
                 }
             }
         }
