@@ -94,11 +94,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddUser.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UserInfoList.ashx" />
+    <Content Include="AddUser.ashx" />
+    <Content Include="DeleteUser.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -113,6 +116,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddUser.ashx.cs">
+      <DependentUpon>AddUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteUser.ashx.cs">
+      <DependentUpon>DeleteUser.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInfoList.ashx.cs">
       <DependentUpon>UserInfoList.ashx</DependentUpon>
