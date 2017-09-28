@@ -65,6 +65,40 @@ namespace Demo1.dal
             return SqlHelper.ExecuteNonquery(sql, CommandType.Text, pars);
 
         }
+
+        //详细信息 根据id获取用户详细信息
+        public UserInfo GetUserInfo(int id)
+        {
+            string sql = "select * from UserInfo where id=@id";
+            SqlParameter[] para = {
+                new SqlParameter("@id",SqlDbType.Int)
+            };
+            para[0].Value = id;
+            DataTable dt=SqlHelper.GetDataTable(sql, CommandType.Text, para);
+            UserInfo userInfo = null;
+            if (dt.Rows.Count > 0)
+            {
+                userInfo = new UserInfo();
+                LoadEntity(userInfo,dt.Rows[0]);
+            }
+            return userInfo;
+        }
+
+        //修改用户信息
+        public int EditUserInfo(UserInfo userInof)
+        {
+            string sql = "update UserInfo set UserName=@UserName,UserPass=@UserPass where id=@id";
+            SqlParameter[] pars = {
+                new SqlParameter("@id",SqlDbType.Int),
+                 new SqlParameter("@UserName",SqlDbType.NVarChar,32),
+                new SqlParameter("@UserPass",SqlDbType.NVarChar,32)
+                 //new SqlParameter("@RegTime",SqlDbType.DateTime)
+            };
+            pars[0].Value = userInof.Id;
+            pars[1].Value = userInof.UserName;
+            pars[2].Value = userInof.UserPass;
+            return SqlHelper.ExecuteNonquery(sql, CommandType.Text, pars);
+        }
     }
 }
 

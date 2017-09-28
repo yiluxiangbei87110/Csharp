@@ -99,9 +99,13 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="showEdit.html" />
     <Content Include="UserInfoList.ashx" />
     <Content Include="AddUser.ashx" />
     <Content Include="DeleteUser.ashx" />
+    <Content Include="showDetail.ashx" />
+    <Content Include="showEdit.ashx" />
+    <Content Include="updateEdit.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -123,6 +127,15 @@
       <DependentUpon>DeleteUser.ashx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="showDetail.ashx.cs">
+      <DependentUpon>showDetail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="showEdit.ashx.cs">
+      <DependentUpon>showEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="updateEdit.ashx.cs">
+      <DependentUpon>updateEdit.ashx</DependentUpon>
+    </Compile>
     <Compile Include="UserInfoList.ashx.cs">
       <DependentUpon>UserInfoList.ashx</DependentUpon>
     </Compile>

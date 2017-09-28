@@ -30,5 +30,17 @@ namespace Demo1.bll
         {
             return userInfoDal.DeleteUser(id)>0;
         }
+
+        //查看信息 通过id
+        public UserInfo GetUserInfo(int id)
+        {
+            return userInfoDal.GetUserInfo(id);
+        }
+
+        //修改用户信息
+        public int EditUserInfo(UserInfo userInfo)
+        {
+            return userInfoDal.EditUserInfo(userInfo);
+        }
     }
 }
