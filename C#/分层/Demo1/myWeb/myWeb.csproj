@@ -100,12 +100,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="showEdit.html" />
+    <Content Include="uploadImg\uploadImg.html" />
     <Content Include="UserInfoList.ashx" />
     <Content Include="AddUser.ashx" />
     <Content Include="DeleteUser.ashx" />
     <Content Include="showDetail.ashx" />
     <Content Include="showEdit.ashx" />
     <Content Include="updateEdit.ashx" />
+    <Content Include="uploadImg\ProcessFileUp.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -136,6 +138,9 @@
     <Compile Include="updateEdit.ashx.cs">
       <DependentUpon>updateEdit.ashx</DependentUpon>
     </Compile>
+    <Compile Include="uploadImg\ProcessFileUp.ashx.cs">
+      <DependentUpon>ProcessFileUp.ashx</DependentUpon>
+    </Compile>
     <Compile Include="UserInfoList.ashx.cs">
       <DependentUpon>UserInfoList.ashx</DependentUpon>
     </Compile>
@@ -157,6 +162,9 @@
       <Project>{d3f2a6e0-0282-435a-8f5b-9acd7c034c37}</Project>
       <Name>demo1.model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="uploadImgs\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
