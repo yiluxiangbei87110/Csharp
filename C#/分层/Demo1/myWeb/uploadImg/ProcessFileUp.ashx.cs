@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.IO;
+using System.Drawing;
+
 namespace myWeb.uploadImg
 {
     /// <summary>
@@ -36,6 +38,25 @@ namespace myWeb.uploadImg
                     }
                     string fullFilePath = dir + newFileName + fileExt;
                     file.SaveAs(context.Request.MapPath(fullFilePath));
+                    //创建水印
+                    //using(Image img=Image.FromStream(file.InputStream))如果值保存水印的建议这么写
+                    //我们希望保存两种图片，一种水印的，一种不加水印的
+                    using(Image img = Image.FromFile(context.Request.MapPath(fullFilePath)))
+                    {
+                        using(Bitmap map=new Bitmap(img.Width,img.Height))
+                        {
+                            using(Graphics g = Graphics.FromImage(map))
+                            {
+                                //从画布最左上角开始画
+                                g.DrawImage(img,0,0,img.Width,img.Height);
+                                g.DrawString("By Filex", new Font("黑体", 20.0f, FontStyle.Italic), Brushes.Red, new PointF(map.Width - 180, map.Height - 50));
+                                string watermarkImgName = "_watermark_" + Guid.NewGuid().ToString();
+                                map.Save(context.Request.MapPath("/uploadImgs/" + watermarkImgName + ".jpg"),System.Drawing.Imaging.ImageFormat.Jpeg);
+                                context.Response.Write("<html><body><img src='/uploadImgs/"+ watermarkImgName + ".jpg'/></body></html>");
+                            }
+                        }
+                    }
+
                     context.Response.Write("<br/>上传成功！");
                     context.Response.Write("<html><body><p><img src='" + fullFilePath + "'/></p><p><a href='http://localhost:63639/uploadImg/uploadImg.html'>返回上一页</a></p></body></html>");
                 }
