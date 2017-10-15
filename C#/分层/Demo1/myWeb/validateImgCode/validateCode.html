@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        window.onload=function(){
+            var refresh = document.getElementById('refresh');
+            refresh.onclick = function () {
+                document.getElementById("imgCode").src = "validateCode.ashx?id="+Date.now();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        用户名：<input type="text" /><br />
+        密码：<input type="password" /><br />
+        验证码：<input type="text" /> <image src="validateCode.ashx" id="imgCode" /><a href="#" id="refresh">看不清</a><br />
+        <input type="submit" value="提交" />
+    </form>
+</body>
+</html>

@@ -109,6 +109,8 @@
     <Content Include="updateEdit.ashx" />
     <Content Include="uploadImg\ProcessFileUp.ashx" />
     <Content Include="graImg\gra.ashx" />
+    <Content Include="thumnailFile\thumnail.ashx" />
+    <Content Include="validateImgCode\validateCode.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -120,6 +122,7 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="UserInfoList.html" />
+    <Content Include="validateImgCode\validateCode.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +142,9 @@
     <Compile Include="showEdit.ashx.cs">
       <DependentUpon>showEdit.ashx</DependentUpon>
     </Compile>
+    <Compile Include="thumnailFile\thumnail.ashx.cs">
+      <DependentUpon>thumnail.ashx</DependentUpon>
+    </Compile>
     <Compile Include="updateEdit.ashx.cs">
       <DependentUpon>updateEdit.ashx</DependentUpon>
     </Compile>
@@ -147,6 +153,9 @@
     </Compile>
     <Compile Include="UserInfoList.ashx.cs">
       <DependentUpon>UserInfoList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="validateImgCode\validateCode.ashx.cs">
+      <DependentUpon>validateCode.ashx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
