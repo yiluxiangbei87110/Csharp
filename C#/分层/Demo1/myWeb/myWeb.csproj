@@ -95,6 +95,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddUser.html" />
+    <Content Include="Asp\AddUserInfo.aspx" />
+    <Content Include="Asp\Edit.aspx" />
     <Content Include="Asp\UserInfoAsp.aspx" />
     <Content Include="css\common.css" />
     <Content Include="packages.config" />
@@ -132,8 +134,22 @@
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Asp\AddUserInfo.aspx.cs">
+      <DependentUpon>AddUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asp\AddUserInfo.aspx.designer.cs">
+      <DependentUpon>AddUserInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Asp\Delete.ashx.cs">
       <DependentUpon>Delete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Asp\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asp\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Asp\UserInfoAsp.aspx.cs">
       <DependentUpon>UserInfoAsp.aspx</DependentUpon>

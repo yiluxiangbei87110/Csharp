@@ -41,7 +41,9 @@
                 <td><%=userInfo.UserName %></td>
                 <td><%=userInfo.UserPass %></td>
                 <td><%=userInfo.RegTime.ToShortDateString() %></td>
+                <td>详细内容</td>
                 <td><a href="Delete.ashx?id=<%=userInfo.Id %>" class="deletes">删除</a></td>
+                <td><a href="Edit.aspx?id=<%=userInfo.Id %>">编辑</a></td>
             </tr>
         <%} %>
     </table>
