@@ -99,6 +99,33 @@ namespace Demo1.dal
             pars[2].Value = userInof.UserPass;
             return SqlHelper.ExecuteNonquery(sql, CommandType.Text, pars);
         }
+
+        //分页查询
+        public List<UserInfo> GetPageList(int start,int end)
+        {
+            string sql = "select * from(select *,row_number() over(order by id) as number from UserInfo) as t where t.num>=@start and t.name<=@end )";
+            SqlParameter[] paras =
+            {
+                new SqlParameter("@start",SqlDbType.Int),
+                new SqlParameter("@end",SqlDbType.Int)
+            };
+            paras[0].Value = start;
+            paras[1].Value = end;
+            DataTable dt = SqlHelper.GetDataTable(sql, CommandType.Text, paras);
+            List<UserInfo> list = null;
+            if (dt.Rows.Count > 0)
+            {
+                list = new List<UserInfo>();
+                UserInfo userInfo = null;
+                foreach (DataRow row in dt.Rows)
+                {
+                    userInfo = new UserInfo();
+                    LoadEntity(userInfo, row);
+                    list.Add(userInfo);
+                }
+            }
+            return list;
+        }
     }
 }
 

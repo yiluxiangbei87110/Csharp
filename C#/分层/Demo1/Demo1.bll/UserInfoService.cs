@@ -42,5 +42,8 @@ namespace Demo1.bll
         {
             return userInfoDal.EditUserInfo(userInfo);
         }
+
+        //分页查询
+        public 
     }
 }
