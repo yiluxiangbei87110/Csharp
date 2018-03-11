@@ -44,6 +44,25 @@ namespace Demo1.bll
         }
 
         //分页查询
-        public 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pageIndex">当前页码</param>
+        /// <param name="pageSize">每页显示的数据</param>
+        /// <returns></returns>
+       public List<UserInfo> GetPageList(int pageIndex, int pageSize)
+        {
+            int start = (pageIndex - 1) * pageSize + 1;
+            int end = pageSize * pageIndex;
+            return userInfoDal.GetPageList(start, end);
+        }
+
+        //获取总的页数
+        public int GetPageCount(int pageSize)
+        {
+            int recordCount = userInfoDal.getRecordCount();
+            int pageCount = Convert.ToInt32(Math.Ceiling((double)recordCount / pageSize));
+            return pageCount;
+        }
     }
 }

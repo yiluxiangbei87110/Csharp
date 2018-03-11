@@ -126,6 +126,13 @@ namespace Demo1.dal
             }
             return list;
         }
+
+        //获取总的记录数
+        public int getRecordCount()
+        {
+            string sql = "select count(*) from userInfo";
+            return Convert.ToInt32(SqlHelper.ExecuteScalar(sql, CommandType.Text));
+        }
     }
 }
 
