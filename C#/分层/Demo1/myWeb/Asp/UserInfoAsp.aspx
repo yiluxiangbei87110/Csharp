@@ -49,5 +49,10 @@
     </table>
     </div>
     </form>
+    <a href="UserInfoAsp.aspx?pageIndex=1">首页</a>  
+    <a href="UserInfoAsp.aspx?pageIndex=<%=currentPageIndex-1<1?1:currentPageIndex-1%>">前页</a>
+    <a href="UserInfoAsp.aspx?pageIndex=<%=currentPageIndex+1>totalPageCount?totalPageCount:currentPageIndex+1%>">后页</a>
+    <a href="UserInfoAsp.aspx?pageIndex=<%=totalPageCount%>">尾页</a>
+    <a href="#"><%=currentPageIndex%>/<%=totalPageCount%></a>
 </body>
 </html>

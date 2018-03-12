@@ -103,7 +103,7 @@ namespace Demo1.dal
         //分页查询
         public List<UserInfo> GetPageList(int start,int end)
         {
-            string sql = "select * from(select *,row_number() over(order by id) as number from UserInfo) as t where t.num>=@start and t.name<=@end )";
+            string sql = "select * from(select *,row_number() over(order by id) as num from UserInfo) as t where t.num>=@start and t.num<=@end ";
             SqlParameter[] paras =
             {
                 new SqlParameter("@start",SqlDbType.Int),
