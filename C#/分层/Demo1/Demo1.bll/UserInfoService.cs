@@ -12,6 +12,7 @@ namespace Demo1.bll
    public  class UserInfoService
     {
         UserInfoDAL userInfoDal = new UserInfoDAL();
+        
         //返回用户列表
         public List<UserInfo> GetList2()
         {
@@ -44,9 +45,6 @@ namespace Demo1.bll
         }
 
         //分页查询
-        /// <summary>
-        /// 
-        /// </summary>
         /// <param name="pageIndex">当前页码</param>
         /// <param name="pageSize">每页显示的数据</param>
         /// <returns></returns>
@@ -64,5 +62,6 @@ namespace Demo1.bll
             int pageCount = Convert.ToInt32(Math.Ceiling((double)recordCount / pageSize));
             return pageCount;
         }
+
     }
 }

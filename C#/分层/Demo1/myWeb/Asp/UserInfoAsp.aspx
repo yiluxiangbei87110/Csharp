@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserInfoAsp.aspx.cs" Inherits="myWeb.Asp.UserInfoAsp" %>
 <%@ Import Namespace="demo1.model" %>
+<%@ Import Namespace="demo1.common" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -7,6 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/pageStyle.css" rel="stylesheet" />
     <script>
         window.onload = function () {
             var deletes_arr = document.getElementsByClassName("deletes");
@@ -54,5 +56,10 @@
     <a href="UserInfoAsp.aspx?pageIndex=<%=currentPageIndex+1>totalPageCount?totalPageCount:currentPageIndex+1%>">后页</a>
     <a href="UserInfoAsp.aspx?pageIndex=<%=totalPageCount%>">尾页</a>
     <a href="#"><%=currentPageIndex%>/<%=totalPageCount%></a>
+    <hr />
+    <div class="page_nav">
+        <%=PageBar.GetpageBar(currentPageIndex,totalPageCount)%>  
+    </div>
+
 </body>
 </html>

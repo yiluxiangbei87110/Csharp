@@ -99,6 +99,7 @@
     <Content Include="Asp\Edit.aspx" />
     <Content Include="Asp\UserInfoAsp.aspx" />
     <Content Include="css\common.css" />
+    <Content Include="css\pageStyle.css" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

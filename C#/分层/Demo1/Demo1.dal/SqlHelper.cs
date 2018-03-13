@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
-
 namespace Demo1.DAL
 {
-   public  class SqlHelper
+    public  class SqlHelper
     {
         //执行DQL
         private static readonly string connStr = ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;
