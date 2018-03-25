@@ -38,6 +38,12 @@ namespace Demo1.bll
             return userInfoDal.GetUserInfo(id);
         }
 
+        //查看信息 通过id
+        public UserInfo GetUserInfo(string username)
+        {
+            return userInfoDal.GetUserInfo(username);
+        }
+
         //修改用户信息
         public int EditUserInfo(UserInfo userInfo)
         {
@@ -61,6 +67,30 @@ namespace Demo1.bll
             int recordCount = userInfoDal.getRecordCount();
             int pageCount = Convert.ToInt32(Math.Ceiling((double)recordCount / pageSize));
             return pageCount;
+        }
+
+        //校验用户名和密码
+        public bool ValidateUseInfo(string name, string password, out string msg,out UserInfo userInfo)
+        {
+           userInfo=userInfoDal.GetUserInfo(name);
+            if (userInfo != null)
+            {
+                if (userInfo.UserPass == password)
+                {
+                    msg = "登录成功";
+                    return true;
+                }else
+                {
+                    msg = "密码错误";
+                    return false;
+                }
+            }else
+            {
+                msg = "没有此用户！！";
+                return false;
+            }
+
+
         }
 
     }

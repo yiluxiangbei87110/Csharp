@@ -20,6 +20,15 @@ namespace myWeb.Asp
         public int totalPageCount { set; get; }
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            //如果没有登录就访问这个页面则需要登录
+            if (Session["userInfo"] == null)
+            {
+                Response.Redirect("login.aspx");
+            }else
+            {
+                Response.Write("欢迎登录"+((UserInfo)Session["userInfo"]).UserName);
+            }
             //显示所有的数据
             //UserInfoService userInfoService = new UserInfoService();
             //List<UserInfo> list = userInfoService.GetList2();

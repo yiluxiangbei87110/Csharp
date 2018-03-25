@@ -84,6 +84,24 @@ namespace Demo1.dal
             return userInfo;
         }
 
+        //详细信息 根据用户名来获取用户信息
+        public UserInfo GetUserInfo(string name)
+        {
+            string sql = "select * from UserInfo where userName=@userName";
+            SqlParameter[] para = {
+                new SqlParameter("@userName",SqlDbType.NVarChar,32)
+            };
+            para[0].Value = name;
+            DataTable dt = SqlHelper.GetDataTable(sql, CommandType.Text, para);
+            UserInfo userInfo = null;
+            if (dt.Rows.Count > 0)
+            {
+                userInfo = new UserInfo();
+                LoadEntity(userInfo, dt.Rows[0]);
+            }
+            return userInfo;
+        }
+
         //修改用户信息
         public int EditUserInfo(UserInfo userInof)
         {

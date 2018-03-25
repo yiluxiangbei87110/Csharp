@@ -96,13 +96,18 @@
   <ItemGroup>
     <Content Include="AddUser.html" />
     <Content Include="Asp\AddUserInfo.aspx" />
+    <Content Include="Asp\login.aspx" />
     <Content Include="Asp\Edit.aspx" />
     <Content Include="Asp\UserInfoAsp.aspx" />
     <Content Include="css\common.css" />
     <Content Include="css\pageStyle.css" />
     <Content Include="otherTest\ServerChild.aspx" />
     <Content Include="otherTest\ServerParent.aspx" />
+    <Content Include="otherTest\session.aspx" />
     <Content Include="otherTest\showUrl.html" />
+    <Content Include="otherTest\testAjaxGet.aspx" />
+    <Content Include="otherTest\testAjaxPost.aspx" />
+    <Content Include="otherTest\TestSession.aspx" />
     <Content Include="otherTest\urlReferrer.aspx" />
     <Content Include="otherTest\viewState.aspx" />
     <Content Include="packages.config" />
@@ -122,6 +127,9 @@
     <Content Include="thumnailFile\thumnail.ashx" />
     <Content Include="validateImgCode\validateCode.ashx" />
     <Content Include="Asp\Delete.ashx" />
+    <Content Include="Asp\validateImgCode.ashx" />
+    <Content Include="otherTest\testGetAjax.ashx" />
+    <Content Include="otherTest\testAjaxPost.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -147,6 +155,13 @@
     <Compile Include="Asp\AddUserInfo.aspx.designer.cs">
       <DependentUpon>AddUserInfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Asp\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asp\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Asp\Delete.ashx.cs">
       <DependentUpon>Delete.ashx</DependentUpon>
     </Compile>
@@ -163,6 +178,9 @@
     </Compile>
     <Compile Include="Asp\UserInfoAsp.aspx.designer.cs">
       <DependentUpon>UserInfoAsp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Asp\validateImgCode.ashx.cs">
+      <DependentUpon>validateImgCode.ashx</DependentUpon>
     </Compile>
     <Compile Include="DeleteUser.ashx.cs">
       <DependentUpon>DeleteUser.ashx</DependentUpon>
@@ -183,6 +201,40 @@
     </Compile>
     <Compile Include="otherTest\ServerParent.aspx.designer.cs">
       <DependentUpon>ServerParent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="otherTest\session.aspx.cs">
+      <DependentUpon>session.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="otherTest\session.aspx.designer.cs">
+      <DependentUpon>session.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="otherTest\testAjaxGet.aspx.cs">
+      <DependentUpon>testAjaxGet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="otherTest\testAjaxGet.aspx.designer.cs">
+      <DependentUpon>testAjaxGet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="otherTest\testAjaxPost.ashx.cs">
+      <DependentUpon>testAjaxPost.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="otherTest\testAjaxPost.aspx.cs">
+      <DependentUpon>testAjaxPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="otherTest\testAjaxPost.aspx.designer.cs">
+      <DependentUpon>testAjaxPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="otherTest\testGetAjax.ashx.cs">
+      <DependentUpon>testGetAjax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="otherTest\TestSession.aspx.cs">
+      <DependentUpon>TestSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="otherTest\TestSession.aspx.designer.cs">
+      <DependentUpon>TestSession.aspx</DependentUpon>
     </Compile>
     <Compile Include="otherTest\urlReferrer.aspx.cs">
       <DependentUpon>urlReferrer.aspx</DependentUpon>

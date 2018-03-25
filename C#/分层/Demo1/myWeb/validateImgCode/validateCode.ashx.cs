@@ -7,7 +7,8 @@ using System.Web;
 namespace myWeb.validateImgCode
 {
     /// <summary>
-    /// validateCode 的摘要说明
+    /// 写出一个验证码图形
+    /// 一般处理程序使用时session程序的时候，必须要实现 System.Web.SessionState.IReadOnlySessionState接口
     /// </summary>
     public class validateCode : IHttpHandler
     {
