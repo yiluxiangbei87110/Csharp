@@ -38,7 +38,7 @@ namespace Demo1.bll
             return userInfoDal.GetUserInfo(id);
         }
 
-        //查看信息 通过id
+        //查看信息 通过用户名
         public UserInfo GetUserInfo(string username)
         {
             return userInfoDal.GetUserInfo(username);

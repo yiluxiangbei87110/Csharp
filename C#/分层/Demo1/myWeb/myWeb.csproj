@@ -95,6 +95,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddUser.html" />
+    <Content Include="Ajax\login.aspx" />
+    <Content Include="Ajax\regist.aspx" />
     <Content Include="Asp\AddUserInfo.aspx" />
     <Content Include="Asp\login.aspx" />
     <Content Include="Asp\Edit.aspx" />
@@ -130,6 +132,8 @@
     <Content Include="Asp\validateImgCode.ashx" />
     <Content Include="otherTest\testGetAjax.ashx" />
     <Content Include="otherTest\testAjaxPost.ashx" />
+    <Content Include="Ajax\testRegName.ashx" />
+    <Content Include="Ajax\testLogin.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -147,6 +151,26 @@
   <ItemGroup>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\regist.aspx.cs">
+      <DependentUpon>regist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\regist.aspx.designer.cs">
+      <DependentUpon>regist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\testLogin.ashx.cs">
+      <DependentUpon>testLogin.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\testRegName.ashx.cs">
+      <DependentUpon>testRegName.ashx</DependentUpon>
     </Compile>
     <Compile Include="Asp\AddUserInfo.aspx.cs">
       <DependentUpon>AddUserInfo.aspx</DependentUpon>
