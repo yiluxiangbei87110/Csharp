@@ -97,6 +97,7 @@
     <Content Include="AddUser.html" />
     <Content Include="Ajax\login.aspx" />
     <Content Include="Ajax\regist.aspx" />
+    <Content Include="Ajax\UserInfoList.html" />
     <Content Include="Asp\AddUserInfo.aspx" />
     <Content Include="Asp\login.aspx" />
     <Content Include="Asp\Edit.aspx" />
@@ -134,6 +135,7 @@
     <Content Include="otherTest\testAjaxPost.ashx" />
     <Content Include="Ajax\testRegName.ashx" />
     <Content Include="Ajax\testLogin.ashx" />
+    <Content Include="Ajax\UserInfoListAjax.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -171,6 +173,9 @@
     </Compile>
     <Compile Include="Ajax\testRegName.ashx.cs">
       <DependentUpon>testRegName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\UserInfoListAjax.ashx.cs">
+      <DependentUpon>UserInfoListAjax.ashx</DependentUpon>
     </Compile>
     <Compile Include="Asp\AddUserInfo.aspx.cs">
       <DependentUpon>AddUserInfo.aspx</DependentUpon>
