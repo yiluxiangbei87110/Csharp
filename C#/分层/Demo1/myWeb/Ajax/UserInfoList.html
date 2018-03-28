@@ -34,6 +34,84 @@
             #table tr:nth-child(odd) {
                 background: #FFF;
             }
+
+        body {
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 1200px;
+            overflow-y: scroll;
+            font-family: 'Open Sans',sans-serif;
+            font-weight: 400;
+            color: #777;
+            background-color: #f7f7f7;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        .load-3{
+            position:absolute;
+        }
+        .k-line2 {
+            display: inline-block;
+            background: #666;
+            height: 10px;
+            width: 10px;
+            opacity: 0;
+            border-radius: 50%;
+            transform: translateX(-300px);
+            background-color: #4b9cdb;
+        }
+
+        .k-line12-1 {
+            animation: k-loadingS 4s infinite;
+            animation-delay: .8s;
+        }
+
+        .k-line12-2 {
+            animation: k-loadingS 4s infinite;
+            animation-delay: .7s;
+        }
+
+        .k-line12-3 {
+            animation: k-loadingS 4s infinite;
+            animation-delay: .6s;
+        }
+
+        .k-line12-4 {
+            animation: k-loadingS 4s infinite;
+            animation-delay: .5s;
+        }
+
+        .k-line12-5 {
+            animation: k-loadingS 4s infinite;
+            animation-delay: .4s;
+        }
+
+        .k-line12-6 {
+            animation: k-loadingS 4s infinite;
+            animation-delay: .3s;
+        }
+
+        .k-line12-7 {
+            animation: k-loadingS 4s infinite;
+            animation-delay: .2s;
+        }
+
+        .k-line12-8 {
+            animation: k-loadingS 4s infinite;
+            animation-delay: .1s;
+        }
+
+        @keyframes k-loadingS {
+            40% {
+                transform: translateX(0);
+                opacity: .8;
+            }
+
+            100% {
+                transform: translateX(300px);
+                opacity: 0;
+            }
     </style>
 </head>
 <body>
@@ -50,16 +128,22 @@
         </tr>
     </table>
     <script>
+        //http://localhost:63639/Ajax/UserInfoList.html
         $(document).ready(function () {
+            var loadingMask = '<div class="load-3"><div class="k-line2 k-line12-1"></div><div class="k-line2 k-line12-2"></div><div class="k-line2 k-line12-3"></div><div class="k-line2 k-line12-4"></div><div class="k-line2 k-line12-5"></div><div class="k-line2 k-line12-6"></div><div class="k-line2 k-line12-7"></div><div class="k-line2 k-line12-8"></div></div>';
+            //确保数据加载完成之后进行数据的增删改查
+            //$('body').append(loadingMask).show();
             $.ajax({
-                url: "UserInfoListAjax.ashx", 
+                url: "UserInfoListAjax.ashx",
                 async: true,//请求是否异步，默认为异步，这也是ajax重要特性
-                type: "GET", 
+                type: "GET",
                 success: function (data) {
+                    //加载数据
                     processData(data);
                 },
                 complete: function () {
-                    console.log('complete');
+                    //删除操作
+                    deleteUserInfo();
                 },
                 error: function () {
                     console.log('error');
@@ -70,18 +154,48 @@
             function processData(data) {
                 var res = JSON.parse(data);
                 for (var i = 0; i < res.length; i++) {
-                    $("#table").append("<tr><td>" + res[i].Id + "</td><td>" + res[i].UserName + "</td><td>" + res[i].UserPass + "</td><td>" + ChangeDateFormat(res[i].RegTime) + "</td><td>" + res[i].Id + "</td><td><a href='javaScipt:void(0)' class='deletes' id="+ res[i].Id +">"+ res[i].Id + "</a></td><td>" + res[i].Id + "</td></tr>");
+                    $("#table").append("<tr><td>" + res[i].Id + "</td><td>" + res[i].UserName + "</td><td>" + res[i].UserPass + "</td><td>" + ChangeDateFormat(res[i].RegTime) + "</td><td>" + res[i].Id + "</td><td><a href='javascipt:void(0)' class='deletes' id=" + res[i].Id + ">" + res[i].Id + "</a></td><td>" + res[i].Id + "</td></tr>");
                 }
-               
-            }
- 
-            //将序列化成json格式后日期(毫秒数)转成日期格式            function ChangeDateFormat(cellval) {
-                var date = new Date(parseInt(cellval.replace("/Date(", "").replace(")/", ""), 10));                var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;                var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();                return date.getFullYear() + "-" + month + "-" + currentDate;
+
             }
 
-            $(".deletes").on('click', function () {
-                alert(1)
-            })
+            //将序列化成json格式后日期(毫秒数)转成日期格式
+            function ChangeDateFormat(cellval) {
+                var date = new Date(parseInt(cellval.replace("/Date(", "").replace(")/", ""), 10));
+                var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+                var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+                return date.getFullYear() + "-" + month + "-" + currentDate;
+            }
+
+            function deleteUserInfo() {
+                $('.deletes').click(function () {
+                    if (confirm("您确定删除此数据吗？")) {
+                        var id = $(this).attr('id');
+                        $.ajax({
+                            url: "DeleteUserInfoAjax.ashx",
+                            async: true,
+                            type: "POST",
+                            data: {
+                                id: id,
+                            },
+                            success: function (data) {
+
+                                var jsonData = JSON.parse(data);
+                                window.jsonData = jsonData;
+                                if (jsonData.status == 0) {
+                                    window.location.reload();
+                                } else {
+                                    alert(data.msg);
+                                }
+                            },
+                            error: function () {
+                                console.log('error');
+                            }
+                        });
+                    }
+                })
+            }
+
         });
 
     </script>

@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="myWeb.Ajax.login1" %>
 
 <!DOCTYPE html>
-
+<title></title>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
@@ -22,7 +22,8 @@
                 $.post("testLogin.ashx", { "userName": username, "userPwd": password }, function (data) {
                     console.log(12)
                     if (data.split(":")[0] == "ok") {
-                        window.location.href = "./../Asp/UserInfoAsp.aspx";
+                        //window.location.href = "./../Asp/UserInfoAsp.aspx";
+                        window.location.href = "UserInfoList.html";
                         }else{
                         $("#msg").text(data.split(":")[1]);
                     }
