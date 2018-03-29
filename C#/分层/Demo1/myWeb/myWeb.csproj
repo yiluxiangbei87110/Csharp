@@ -103,6 +103,7 @@
     <Content Include="Asp\Edit.aspx" />
     <Content Include="Asp\UserInfoAsp.aspx" />
     <Content Include="css\common.css" />
+    <Content Include="css\easyui.css" />
     <Content Include="css\pageStyle.css" />
     <Content Include="otherTest\ServerChild.aspx" />
     <Content Include="otherTest\ServerParent.aspx" />
@@ -117,6 +118,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="scripts\easyui-lang-zh_CN.js" />
+    <Content Include="scripts\jquery-1.7.1.js" />
+    <Content Include="scripts\jquery.easyui.min.js" />
     <Content Include="showEdit.html" />
     <Content Include="uploadImg\uploadImg.html" />
     <Content Include="UserInfoList.ashx" />
@@ -137,6 +141,8 @@
     <Content Include="Ajax\testLogin.ashx" />
     <Content Include="Ajax\UserInfoListAjax.ashx" />
     <Content Include="Ajax\DeleteUserInfoAjax.ashx" />
+    <Content Include="Ajax\AddUserInfoAjax.ashx" />
+    <Content Include="Ajax\showUserInfoAjax.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -155,6 +161,9 @@
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Ajax\AddUserInfoAjax.ashx.cs">
+      <DependentUpon>AddUserInfoAjax.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Ajax\DeleteUserInfoAjax.ashx.cs">
       <DependentUpon>DeleteUserInfoAjax.ashx</DependentUpon>
     </Compile>
@@ -171,6 +180,9 @@
     </Compile>
     <Compile Include="Ajax\regist.aspx.designer.cs">
       <DependentUpon>regist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\showUserInfoAjax.ashx.cs">
+      <DependentUpon>showUserInfoAjax.ashx</DependentUpon>
     </Compile>
     <Compile Include="Ajax\testLogin.ashx.cs">
       <DependentUpon>testLogin.ashx</DependentUpon>
