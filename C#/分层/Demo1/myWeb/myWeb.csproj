@@ -143,6 +143,7 @@
     <Content Include="Ajax\DeleteUserInfoAjax.ashx" />
     <Content Include="Ajax\AddUserInfoAjax.ashx" />
     <Content Include="Ajax\showUserInfoAjax.ashx" />
+    <Content Include="Ajax\EditUserInfoAjax.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -166,6 +167,9 @@
     </Compile>
     <Compile Include="Ajax\DeleteUserInfoAjax.ashx.cs">
       <DependentUpon>DeleteUserInfoAjax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\EditUserInfoAjax.ashx.cs">
+      <DependentUpon>EditUserInfoAjax.ashx</DependentUpon>
     </Compile>
     <Compile Include="Ajax\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

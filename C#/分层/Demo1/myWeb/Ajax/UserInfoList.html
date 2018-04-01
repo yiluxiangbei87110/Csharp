@@ -25,6 +25,7 @@
             <th>编辑</th>
         </tr>
     </table>
+    <div class="page_nav"></div>
 
     <!----------------添加用户信息------------------->
     <div id="addUserDiv" style="display:none">
@@ -37,8 +38,22 @@
     </div>
 
 
+    <!------------详细信息------------------>
+    <div id="detailDiv" style="display:none;">
+        <table>
+            <tr>
+                <td>用户名</td>
+                <td><span id="userName"></span></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><span id="userPwd"></span></td>
+            </tr>
+        </table>
+    </div>
+
     <!-------------------编辑用户的数据--------------------->
-    <div id="editUserDiv" style="display:none">
+    <div id="editUserDiv"  style="display:none;">
         <form id="editUserForm">
             <input type="hidden" name="txtEditUserId" id="editUserId" />
             <input type="hidden" name="txtEditRegTime" id="editRegTime" />
@@ -49,37 +64,40 @@
         </form>
     </div>
 
-
     <script>
         $(document).ready(function () {
             var loadingMask = '<div class="load-wrap"><div class="k-line2 k-line12-1"></div><div class="k-line2 k-line12-2"></div><div class="k-line2 k-line12-3"></div><div class="k-line2 k-line12-4"></div><div class="k-line2 k-line12-5"></div><div class="k-line2 k-line12-6"></div><div class="k-line2 k-line12-7"></div><div class="k-line2 k-line12-8"></div></div>';
             //确保数据加载完成之后进行数据的增删改查
             $('body').append(loadingMask).show();
-            loadUserInfo();
+            loadUserInfo(1);
             $("#addUserInfo").click(function () {
                 bindAddClick();
             });
         });
 
         //加载用户信息
-        function loadUserInfo() {
+        function loadUserInfo(pageIndex) {
             $.ajax({
                 url: "UserInfoListAjax.ashx",
                 async: true,//请求是否异步，默认为异步，这也是ajax重要特性
-                type: "GET",
+                type: "POST",
+                data:{pageIndex:pageIndex},
                 success: function (data) {
                     //加载前先清除数据
                     $("#table  tr:gt(0)").remove();
                     //加载数据
                     var res = JSON.parse(data);
-                    for (var i = 0; i < res.length; i++) {
-                        $("#table").append("<tr><td>" + res[i].Id + "</td><td>" + res[i].UserName + "</td><td>" + res[i].UserPass + "</td><td>" + ChangeDateFormat(res[i].RegTime) + "</td><td><a href='javascipt:void(0)' class='details' id=" + res[i].Id + ">详细信息</a></td><td><a href='javascipt:void(0)' class='deletes' id=" + res[i].Id + ">删除</a></td><td>" + res[i].Id + "</td></tr>");
+                    for (var i = 0; i < res.UList.length; i++) {
+                        $("#table").append("<tr><td>" + res.UList[i].Id + "</td><td>" + res.UList[i].UserName + "</td><td>" + res.UList[i].UserPass + "</td><td>" + ChangeDateFormat(res.UList[i].RegTime) + "</td><td><a href='javascipt:void(0)' class='details' id=" + res.UList[i].Id + ">详细信息</a></td><td><a href='javascipt:void(0)' class='deletes' id=" + res.UList[i].Id + ">删除</a></td><td><a href='javascipt:void(0)' class='edits' id=" + res.UList[i].Id + ">编辑</a></td></tr>");
                     }
+                    $(".page_nav").html(res.PageBar);
                 },
                 complete: function () {
                     //删除操作
                     deleteUserInfo();
-                    showUserInfoDetail();
+                    showUserInfoDetail(pageIndex);
+                    updateUserInfo();
+                    flipPage();
                     setTimeout(() => {
                         $(".load-wrap").hide();
                     },3000)
@@ -190,18 +208,16 @@
                 }]
             });
         }
-        //展示用户数据.
+        //展示详细信息
         function showUserInfoDetail() {
             $(".details").click(function () {
                 var id = $(this).attr("id");
                 $.post("showUserInfoAjax.ashx", { "id": id }, function (data) {
                     var serverData = $.parseJSON(data);
-                    $("#editUserId").val(serverData.Id);
-                    $("#eidUserName").val(serverData.UserName);
-                    $("#editUserPwd").val(serverData.UserPass);
-                    $("#editRegTime").val(ChangeDateFormat(serverData.RegTime));
-                    $("#editUserDiv").css("display", "block");
-                    $('#editUserDiv').dialog({
+                    $("#userName").text(serverData.UserName);
+                    $("#userPwd").text(serverData.UserPass);
+                    $("#detailDiv").css("display", "block");
+                    $('#detailDiv').dialog({
                         width: 300,
                         height: 300,
                         title: "用户详细信息",
@@ -213,7 +229,43 @@
                             text: 'Ok',
                             iconCls: 'icon-ok',
                             handler: function () {
-                                alert("ok");
+                                alert('ok');
+                            }
+                        }, {
+                            text: 'Cancel',
+                            handler: function () {
+                                $('#detailDiv').dialog('close');
+                            }
+                        }]
+                    });
+
+                });
+            });
+        }
+        //展示要修改的数据.
+        function updateUserInfo() {
+            $(".edits").click(function () {
+                var id = $(this).attr("id");
+                $.post("showUserInfoAjax.ashx", { "id": id }, function (data) {
+                    var serverData = $.parseJSON(data);
+                    $("#editUserId").val(serverData.Id);
+                    $("#eidUserName").val(serverData.UserName);
+                    $("#editUserPwd").val(serverData.UserPass);
+                    $("#editRegTime").val(ChangeDateFormat(serverData.RegTime));
+                    $("#editUserDiv").css("display", "block");
+                    $('#editUserDiv').dialog({
+                        width: 300,
+                        height: 300,
+                        title: "修改用户信息",
+                        collapsible: true,
+                        maximizable: true,
+                        resizable: true,
+                        modal: true,
+                        buttons: [{
+                            text: 'Ok',
+                            iconCls: 'icon-ok',
+                            handler: function () {
+                                editUserInfo();
                             }
                         }, {
                             text: 'Cancel',
@@ -224,6 +276,43 @@
                     });
                 });
             });
+        }
+        //完成数据更新
+        function editUserInfo() {
+            var pars = $("#editUserForm").serializeArray();
+            $.post("EditUserInfoAjax.ashx", pars, function (data) {
+                console.log(data)
+                if (data == "yes") {
+                    $.messager.show({
+                        title: '信息提示',
+                        msg: '修改成功',
+                        showType: 'show',
+                        style: {
+                            right: '',
+                            top: document.body.scrollTop + document.documentElement.scrollTop,
+                            bottom: ''
+                        }
+                    });
+                    //关闭添加窗口
+                    $('#editUserDiv').dialog('close');
+                    //删除表格旧数据
+                    $("#tabList tr:gt(0)").remove();
+                    //重新给表格添加数据
+                    loadUserInfo();
+                } else {
+                    $.messager.alert("提示", "修改失败", "error");
+                }
+
+            });
+        }
+        
+        //页码进行翻页
+        function flipPage() {
+            $(".flip").click(function () {
+                var pageIndex = $(this).attr("pageIndex");
+                loadUserInfo(pageIndex);
+
+            })
         }
         //将序列化成json格式后日期(毫秒数)转成日期格式
         function ChangeDateFormat(cellval) {
